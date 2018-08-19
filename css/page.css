@@ -1,0 +1,123 @@
+.AdBlock .chat-top-ad, .AdBlock .room-ad-top, .AdBlock .room-ad-video-down, .AdBlock .room-ad-bottom, .AdBlock #js-chat-right-ad, .AdBlock .tab-content.promote, .AdBlock .f-sign-cont,
+.AdBlock .his-sign-cont, .AdBlock div[data-module=left-cont], .AdBlock .chat-ad, .AdBlock .sq-ad, .AdBlock .assort-ad, .AdBlock #js-guess-start, .AdBlock .chat-sysbroadcast-ad, .AdBlock .chat-sysbroadcast-imgad,
+.AdBlock .task-recommendTip, .AdBlock .pay-give-wrap, .AdBlock .task-newTip, .AdBlock .video-entry-guide, .AdBlock .search-suggest-ad {
+  display: none !important; }
+
+.ForbidAutoJump #dialog-more-video {
+  display: none !important; }
+
+.HideChat #ShowChatTip, .HideChat #ShowChatTip2, .PreventLag #ShowChatTip, .PreventLag #ShowChatTip2 {
+  position: absolute;
+  top: 50%;
+  left: 37%;
+  width: 26%;
+  border: 1px solid #ea6e02;
+  background: #ff7700;
+  color: #fff;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer; }
+  .HideChat #ShowChatTip:hover, .HideChat #ShowChatTip2:hover, .PreventLag #ShowChatTip:hover, .PreventLag #ShowChatTip2:hover {
+    background: #ff9900; }
+.HideChat #js-chat-cont *:not(#ShowChatTip):not(#ShowChatTip2):not(.peck-back-tip), .PreventLag #js-chat-cont *:not(#ShowChatTip):not(#ShowChatTip2):not(.peck-back-tip) {
+  display: none !important; }
+
+.HideChat:not(.PreventLag) #ShowChatTip2 {
+  display: none; }
+
+.ChatMode .chat-icon-pad.user-level, .ChatMode .chat-icon-pad.user-noble, .ChatMode .chat-icon-pad[data-msg=fans] {
+  display: none !important; }
+.ChatMode .jschartli.sys-msg {
+  display: none !important; }
+.ChatMode #js-fans-rank {
+  display: none !important; }
+.ChatMode #js-chat-cont {
+  top: 0;
+  border-radius: 4px 4px 0 0; }
+
+.ChatMode .my-cont > *:not(.name):not(.m),
+.ChatMode p.text-cont:not(.task-wel) > *:not(.name):not(.text-cont):not(.chat-icon-pad),
+.ChatMode p.text-cont.task-wel, .ChatMode .giftbatter-noble-enter, .ChatMode .pc-client-icon, .ChatMode2 .my-cont > *:not(.name):not(.m),
+.ChatMode2 p.text-cont:not(.task-wel) > *:not(.name):not(.text-cont):not(.chat-icon-pad),
+.ChatMode2 p.text-cont.task-wel, .ChatMode2 .giftbatter-noble-enter, .ChatMode2 .pc-client-icon {
+  display: none !important; }
+.ChatMode .jschartli:not(.hy-chat):not(.sys-msg), .ChatMode2 .jschartli:not(.hy-chat):not(.sys-msg) {
+  display: none !important; }
+.ChatMode .chat-icon-pad.cq-level, .ChatMode .chat-icon-pad.madel-list, .ChatMode .chat-icon-pad.cq-other, .ChatMode2 .chat-icon-pad.cq-level, .ChatMode2 .chat-icon-pad.madel-list, .ChatMode2 .chat-icon-pad.cq-other {
+  display: none !important; }
+
+.body-flash-fullpage .filter-keywords-btn {
+  margin-top: 8px; }
+.body-flash-fullpage .chatControlBtn {
+  margin-top: 3px; }
+.body-flash-fullpage .chatControl {
+  bottom: 35px !important; }
+
+.chatControlBtn {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px !important;
+  background: no-repeat 100%/100%;
+  margin: 0;
+  padding: 6px 7px; }
+  .chatControlBtn img {
+    border-radius: 4px; }
+  .chatControlBtn:hover .chatControl {
+    display: block; }
+
+.chatControl {
+  position: absolute;
+  width: max-content;
+  cursor: default;
+  padding: 6px 12px !important;
+  background: #fff;
+  border: 1px solid #ebebeb;
+  border-radius: 3px;
+  right: -58px !important; }
+  .chatControl .shie-site-list-arrow {
+    left: unset !important;
+    right: 69px; }
+  .chatControl .shie-input a {
+    position: relative;
+    top: -1px; }
+
+#js-filter-keywords {
+  margin-left: 8px; }
+
+.btnConcise {
+  margin: 0;
+  line-height: 24px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  border-radius: 2px;
+  text-align: center;
+  cursor: pointer;
+  color: #666; }
+  .btnConcise:hover {
+    background: #f5f5f5; }
+
+.fans-barrage-box.configAutoMuteDiv {
+  bottom: 150px;
+  left: 0;
+  padding-bottom: 12px;
+  z-index: 330;
+  border: 0; }
+  .fans-barrage-box.configAutoMuteDiv textarea {
+    margin-top: 8px;
+    width: 100%;
+    height: 150px;
+    box-sizing: border-box;
+    line-height: 16px; }
+  .fans-barrage-box.configAutoMuteDiv .fans-barrage-colordes {
+    margin-top: 10px;
+    text-align: right; }
+  .fans-barrage-box.configAutoMuteDiv .btnConcise {
+    margin-top: 10px;
+    display: inline-block;
+    width: 60px; }
+  .fans-barrage-box.configAutoMuteDiv .fans-barrage-right {
+    cursor: pointer; }
+
+/*# sourceMappingURL=page.css.map */

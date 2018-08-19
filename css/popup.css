@@ -1,0 +1,255 @@
+@import url(iconfont.css);
+html, body {
+  margin: 0;
+  padding: 0; }
+
+body {
+  width: 350px;
+  height: 550px;
+  background: #bee1fa url(/res/lapped.png);
+  font-family: "Segoe UI", Arial, "Microsoft Yahei", sans-serif; }
+
+.head {
+  height: 120px; }
+  .head .cover {
+    position: absolute;
+    height: 60px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2); }
+  .head .imgHead, .head .click {
+    position: absolute;
+    background: url(/res/head.png) center/100%;
+    left: 135px;
+    top: 20px;
+    height: 80px;
+    width: 80px;
+    border-radius: 10%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); }
+  .head .click {
+    cursor: pointer;
+    background: transparent;
+    color: rgba(255, 255, 255, 0);
+    transition: all .1s linear;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); }
+    .head .click:hover {
+      background: rgba(0, 0, 0, 0.5);
+      color: white; }
+
+.bottom {
+  background: rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  line-height: 40px;
+  color: #fff; }
+
+.checkBox {
+  background: rgba(0, 0, 0, 0.4);
+  width: max-content;
+  border-radius: 3px;
+  padding: 0 8px 0 5px;
+  height: 30px;
+  line-height: 30px;
+  cursor: pointer;
+  color: #fff; }
+  .checkBox .box {
+    float: left;
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    height: 20px;
+    width: 20px;
+    margin-top: 5px; }
+    .checkBox .box.checked::before {
+      content: ' ';
+      display: block;
+      width: 14px;
+      height: 14px;
+      margin: 2px;
+      border-radius: 2px;
+      background: #fff; }
+  .checkBox .text {
+    float: left;
+    display: inline-block;
+    margin-left: 8px; }
+  .checkBox:hover {
+    background: rgba(0, 0, 0, 0.5); }
+
+.switchList {
+  margin: 0 40px;
+  font-size: 13px;
+  color: #4678a0; }
+  .switchList .switchItem {
+    position: relative;
+    border-top: 1px dashed rgba(0, 0, 0, 0.2);
+    min-height: 40px; }
+    .switchList .switchItem:first-child {
+      border-top-color: transparent; }
+    .switchList .switchItem .switchTip {
+      width: 175px;
+      margin-left: 95px;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.4);
+      color: #fff;
+      line-height: 30px;
+      margin-top: 5px;
+      border-radius: 2px;
+      cursor: default; }
+      .switchList .switchItem .switchTip.canClick {
+        cursor: pointer; }
+        .switchList .switchItem .switchTip.canClick:hover {
+          background: rgba(0, 0, 0, 0.5); }
+
+*[switch] {
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  float: left;
+  height: 30px;
+  width: 80px;
+  margin-right: 15px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5), 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5%;
+  background: rgba(0, 0, 0, 0.1);
+  color: #fff; }
+  *[switch] .back {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    height: calc(100% - 6px);
+    width: calc(100% - 6px);
+    background: #f06e87;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.4), 0 0 5px rgba(255, 255, 255, 0.2);
+    border-radius: 5%;
+    line-height: 24px;
+    cursor: pointer;
+    filter: brightness(0.95);
+    transition: all .1s linear; }
+    *[switch] .back div:not(.item) {
+      float: left;
+      display: inline-block;
+      height: 100%;
+      width: 50%;
+      text-align: center; }
+    *[switch] .back .item {
+      position: absolute;
+      top: 0;
+      left: 37px;
+      height: 24px;
+      width: 37px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+      border-radius: 6%;
+      background: #f06e87 url(/res/item.png);
+      transition: all .1s linear; }
+    *[switch] .back:hover {
+      filter: brightness(1); }
+    *[switch] .back.switched {
+      background-color: #69d7eb; }
+      *[switch] .back.switched .item {
+        background-color: #69d7eb;
+        left: 0; }
+
+.configDrop {
+  transition: all .1s linear;
+  overflow: hidden; }
+  .configDrop:not(.expanded) {
+    height: 0 !important;
+    padding: 0 !important; }
+  .configDrop.configLiveTip {
+    height: 75px;
+    padding: 5px 0;
+    box-sizing: border-box; }
+    .configDrop.configLiveTip br {
+      clear: both; }
+    .configDrop.configLiveTip input, .configDrop.configLiveTip button {
+      outline: none;
+      border: none;
+      height: 30px;
+      display: inline-block;
+      box-sizing: border-box;
+      vertical-align: middle;
+      float: left; }
+    .configDrop.configLiveTip input {
+      width: 62%;
+      padding: 0 8px;
+      background: rgba(0, 0, 0, 0.4);
+      color: #fff;
+      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+      border-radius: 2px; }
+      .configDrop.configLiveTip input::placeholder {
+        color: #ddd; }
+    .configDrop.configLiveTip button {
+      width: 18%;
+      background: rgba(0, 0, 0, 0.4);
+      color: #fff;
+      border-radius: 3px;
+      margin-left: 1%;
+      cursor: pointer; }
+      .configDrop.configLiveTip button:hover {
+        background: rgba(0, 0, 0, 0.5); }
+    .configDrop.configLiveTip .configLine2 {
+      clear: both;
+      margin-top: 5px; }
+  .configDrop.configGetBoxHelp {
+    height: 40px;
+    padding: 5px 0;
+    box-sizing: border-box; }
+  .configDrop.configAutoGiveGift {
+    height: 40px;
+    padding: 5px 0;
+    box-sizing: border-box; }
+
+.box-count-clear {
+  position: absolute;
+  top: 9px;
+  right: -27px;
+  padding: 3px;
+  border-radius: 3px;
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(0, 0, 0, 0.25);
+  cursor: pointer; }
+  .box-count-clear:hover {
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(0, 0, 0, 0.4); }
+
+.cantSelect {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.crosswiseList {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.4);
+  width: max-content;
+  border-radius: 3px;
+  padding: 0 8px 0 5px;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  float: left;
+  margin-right: 1px; }
+  .crosswiseList span {
+    display: inline-block;
+    margin-left: 2px;
+    width: 30px; }
+  .crosswiseList button {
+    outline: none;
+    border: 0;
+    border-radius: 2px;
+    margin: 5px 0 0 6px;
+    height: 20px;
+    width: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    vertical-align: top;
+    cursor: pointer; }
+    .crosswiseList button:hover {
+      background: rgba(0, 0, 0, 0.4); }
+
+/*# sourceMappingURL=popup.css.map */

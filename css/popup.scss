@@ -1,0 +1,313 @@
+@import "iconfont.css";
+$popupWidth: 350;
+$headHeight: 120;
+$imgHeadSize: $headHeight - 40;
+$switchColorYes: rgb(105, 215, 235);
+$switchColorNo: rgb(240, 110, 135);
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: $popupWidth + px;
+    height: 550px;
+    background: rgb(190, 225, 250) url(/res/lapped.png);
+    font-family: "Segoe UI", Arial, "Microsoft Yahei", sans-serif;
+}
+
+.head {
+    height: $headHeight + px;
+
+    .cover {
+        position: absolute;
+        height: ($headHeight / 2) + px;
+        width: 100%;
+        background: rgba(0, 0, 0, .1);
+        box-shadow: 0 0 2px 1px rgba(0, 0, 0, .2);
+    }
+    .imgHead, .click {
+        position: absolute;
+        background: url(/res/head.png) center / 100%;
+        left: (($popupWidth - $imgHeadSize) / 2) + px;
+        top: (($headHeight - $imgHeadSize) / 2) + px;
+        height: $imgHeadSize + px;
+        width: $imgHeadSize + px;
+        border-radius: 10%;
+        box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+    }
+    .click {
+        cursor: pointer;
+        background: rgba(0, 0, 0, 0);
+        color: rgba(255, 255, 255, 0);
+        transition: all .1s linear;
+        text-align: center;
+        box-sizing: border-box;
+        padding-top: 15px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        &:hover {
+            background: rgba(0, 0, 0, .5);
+            color: rgba(255, 255, 255, 1);
+        }
+    }
+}
+
+.bottom {
+    background: rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    box-shadow: 0 0 2px 1px rgba(0,0,0,.2);
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+}
+
+.checkBox {
+    background: rgba(0, 0, 0, 0.4);
+    width: max-content;
+    border-radius: 3px;
+    padding: 0 8px 0 5px;
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    color: #fff;
+    .box {
+        float: left;
+        display: inline-block;
+        box-sizing: border-box;
+        border: 1px solid #fff;
+        border-radius: 4px;
+        height: 20px;
+        width: 20px;
+        margin-top: 5px;
+        &.checked::before {
+            content: ' ';
+            display: block;
+            width: 14px;
+            height: 14px;
+            margin: 2px;
+            border-radius: 2px;
+            background: #fff;
+        }
+    }
+    .text {
+        float: left;
+        display: inline-block;
+        margin-left: 8px;
+    }
+    &:hover {
+        background: rgba(0, 0, 0, 0.5);
+    }
+}
+
+.switchList {
+    margin: 0 40px;
+    font-size: 13px;
+    color: rgb(70, 120, 160);
+    .switchItem {
+        position: relative;
+        border-top: 1px dashed rgba(0, 0, 0, .2);
+        min-height: 40px;
+        &:first-child {
+            border-top-color: transparent;
+        }
+        .switchTip {
+            width: 175px;
+            margin-left: 95px;
+            text-align: center;
+            background: rgba(0, 0, 0, .4);
+            color: #fff;
+            line-height: 30px;
+            margin-top: 5px;
+            border-radius: 2px;
+            cursor: default;
+            &.canClick {
+                cursor: pointer;
+                &:hover {
+                    background: rgba(0, 0, 0, .5);
+                }
+            }
+        }
+    }
+}
+
+*[switch] {
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    float: left;
+    height: 30px;
+    width: 80px;
+    margin-right: 15px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5), 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5%;
+    background: rgba(0, 0, 0, .1);
+    color: #fff;
+    .back {
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        height: calc(100% - 6px);
+        width: calc(100% - 6px);
+        background: $switchColorNo;
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.4), 0 0 5px rgba(255, 255, 255, 0.2);
+        border-radius: 5%;
+        line-height: 24px;
+        cursor: pointer;
+        filter: brightness(.95);
+        transition: all .1s linear;
+        div:not(.item) {
+            float: left;
+            display: inline-block;
+            height: 100%;
+            width: 50%;
+            text-align: center;
+        }
+        .item {
+            position: absolute;
+            top: 0;
+            left: 37px;
+            height: 24px;
+            width: 37px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+            border-radius: 6%;
+            background: $switchColorNo url(/res/item.png);
+            transition: all .1s linear;
+        }
+        &:hover {
+            filter: brightness(1);
+            .item {
+            }
+        }
+
+        &.switched {
+            background-color: $switchColorYes;
+            .item {
+                background-color: $switchColorYes;
+                left: 0;
+            }
+        }
+    }
+}
+
+.configDrop {
+    transition: all .1s linear;
+    overflow: hidden;
+
+    &:not(.expanded) {
+        height: 0 !important;
+        padding: 0 !important;
+    }
+
+    &.configLiveTip {
+        height: 75px;
+        padding: 5px 0;
+        box-sizing: border-box;
+        br {
+            clear: both;
+        }
+        input, button {
+            outline: none;
+            border: none;
+            height: 30px;
+            display: inline-block;
+            box-sizing: border-box;
+            vertical-align: middle;
+            float: left;
+        }
+        input {
+            width: 62%;
+            padding: 0 8px;
+            background: rgba(0, 0, 0, .4);
+            color: #fff;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, .5);
+            border-radius: 2px;
+            &::placeholder {
+                color: #ddd;
+            }
+        }
+        button {
+            width: 18%;
+            background: rgba(0, 0, 0, 0.4);
+            color: #fff;
+            border-radius: 3px;
+            margin-left: 1%;
+            cursor: pointer;
+            &:hover {
+                background: rgba(0, 0, 0, .5);
+            }
+        }
+        .configLine2 {
+            clear: both;
+            margin-top: 5px;
+        }
+    }
+
+    &.configGetBoxHelp {
+        height: 40px;
+        padding: 5px 0;
+        box-sizing: border-box;
+    }
+
+    &.configAutoGiveGift {
+        height: 40px;
+        padding: 5px 0;
+        box-sizing: border-box;
+    }
+}
+
+.box-count-clear {
+    position: absolute;
+    top: 9px;
+    right: -27px;
+    padding: 3px;
+    border-radius: 3px;
+    color: rgba(255,255,255,.8);
+    background: rgba(0,0,0,.25);
+    cursor: pointer;
+
+    &:hover {
+        color: rgba(255,255,255,.9);
+        background: rgba(0,0,0,.4);
+    }
+}
+
+.cantSelect {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.crosswiseList {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.4);
+    width: max-content;
+    border-radius: 3px;
+    padding: 0 8px 0 5px;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    float: left;
+    margin-right: 1px;
+    span {
+        display: inline-block;
+        margin-left: 2px;
+        width: 30px;
+    }
+    button {
+        outline: none;
+        border: 0;
+        border-radius: 2px;
+        margin: 5px 0 0 6px;
+        height: 20px;
+        width: 20px;
+        background: rgba(0, 0, 0, .3);
+        color: #fff;
+        vertical-align: top;
+        cursor: pointer;
+        &:hover {
+            background: rgba(0, 0, 0, .4);
+        }
+    }
+}

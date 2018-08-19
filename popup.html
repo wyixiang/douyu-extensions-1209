@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Popup</title>
+    <link rel="stylesheet" href="css/popup.css">
+    <script src="js/jquery172.min.js"></script>
+    <script src="js/const.js"></script>
+    <script src="js/angular.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/popupModule.js"></script>
+    <script src="js/popup.js"></script>
+</head>
+<body ng-controller="popupController">
+    <div class="head">
+        <div class="cover"></div>
+        <div class="imgHead"></div>
+        <div class="click" ng-click="openUrl('https://www.douyu.com/196')">小缘喵<br>の<br>直播间</div>
+    </div>
+    <div class="switchList">
+        <div class="switchItem" ng-repeat="switchName in getSwitchList()">
+            <div switch="switchStates[switchName]" state-change="switch(switchName, switched)"></div>
+            <div class="switchTip" title="{{ CONST.Switch[switchName]['tip'] }}" ng-class="{ canClick: CONST.Switch[switchName]['config'] }">
+                <div ng-click="openConfig(switchName)">
+                    {{ CONST.Switch[switchName]['CN'] }}
+                    <span ng-if="switchName === 'GetBoxHelp' && switchStates[switchName]">[ 今日: {{ getNowCount() }} 个 ]</span>
+                </div>
+            </div>
+            <div class="configDrop configLiveTip" ng-if="switchName === 'LiveTip'">
+                <input placeholder="直播间号, 以逗号分割" ng-model="models.configLiveTip" />
+                <button ng-click="ConfigLiveTip(true)">保存</button>
+                <button ng-click="ConfigLiveTip(false)">取消</button>
+                <br>
+                <div class="configLine2">
+                    <div check-box="bgPage.config['LiveTipAutoOpen']" text="'开播时自动刷新/打开页面'"
+                         title="{{ '开启此项后监听到主播开播, 将会检查当前是否有开启该主播的页面,\n如果有则自动刷新, 没有则新开一个页面进入直播间' }}"
+                         state-change="changeConfig('LiveTipAutoOpen', checked)"></div>
+                </div>
+            </div>
+            <div class="configDrop configAutoGiveGift" ng-if="switchName === 'AutoGiveGift'">
+                <div check-box="bgPage.config['QuickGift']" text="'开启快速赠送模式'"
+                     title="{{ '开启后, 送礼将乱序赠送, 加快赠送速度,\n但可能会出现少送的问题 (问题不大)' }}"
+                     state-change="changeConfig('QuickGift', checked)"></div>
+            </div>
+            <div class="configDrop configGetBoxHelp" ng-if="switchName === 'GetBoxHelp'">
+                <div crosswise-list label="'音效'" li-data="['叮', 'Biu', '干杯', 'Baka', '卟卟', '短信', 'Rua']" index="bgPage.config['soundIndex']" state-change="ConfigGetBoxHelp(1, index, val)"></div>
+                <div crosswise-list label="'音量'" li-data="[0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]" index="bgPage.config['soundVolume']" state-change="ConfigGetBoxHelp(2, index, val)"></div>
+            </div>
+            <div class="box-count-clear" ng-click="clearBoxCount()" ng-if="switchName === 'GetBoxHelp'">
+                <i class="iconfont icon-qingchu"></i>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        联系作者: whitemind@qq.com
+    </div>
+</body>
+</html>

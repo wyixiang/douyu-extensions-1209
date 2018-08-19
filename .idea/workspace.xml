@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b719c0b2-4ab6-4bd2-82a2-74a1fa09e4b5" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="popup.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/popup.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="830">
+              <caret line="48" column="57" selection-start-line="48" selection-start-column="57" selection-end-line="48" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="popup.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/popup.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5054">
+              <caret line="266" column="19" selection-start-line="266" selection-start-column="19" selection-end-line="266" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="popup.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/popup.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="const.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/const.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="57" selection-start-line="57" selection-end-line="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="page.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/page.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="53" column="13" lean-forward="true" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
+              <folding>
+                <marker date="1529137463351" expanded="true" signature="13772:13821" ph="..." />
+                <marker date="1529137463351" expanded="true" signature="13772:14139" ph="..." />
+                <marker date="1529137463351" expanded="true" signature="13772:14296" ph="..." />
+                <marker date="1529137463351" expanded="true" signature="13822:13876" ph="..." />
+                <marker date="1529137463351" expanded="true" signature="13822:14029" ph="..." />
+                <marker date="1529137463351" expanded="true" signature="13877:13969" ph="..." />
+                <marker date="1529137463351" expanded="true" signature="13877:13970" ph="..." />
+                <marker date="1529137463351" expanded="true" signature="14140:14276" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="background.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/background.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="621">
+              <caret line="144" column="120" lean-forward="true" selection-start-line="144" selection-start-column="120" selection-end-line="144" selection-end-column="120" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="page.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/page.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_dyl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/_dyl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="manifest.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/manifest.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>GotBox</find>
+      <find>geetest</find>
+      <find>douyu/page/room/normal/mod/gift/controller/treasure</find>
+      <find>tryHo</find>
+      <find>click</find>
+      <find>2.0.7</find>
+      <find>GetBoxHelp</find>
+      <find>freete</find>
+      <find>genChatInfo</find>
+      <find>cs-textarea</find>
+      <find>!function(){var t={cookie_pre:&quot;_dys_&quot;,page_refer_cookie:&quot;page_refer3&quot;,page_refer_max_count:10},e=function(t){t=t||window;var n,i,a=t.document,o=function(e){var n=!1;if(e.getBoundingClientRect){var i=e.getBoundingClientRect();n={top:Math.max(i.top,0),left:Math.max(i.left,0),bottom:Math.min(i.bottom,t.innerHeight||a.documentElement.clientHeight),right:Math.min(i.right,t.innerWidth||a.documentElement.clientWidth)},n.bottom&lt;=n.top||n.right&lt;=n.left?n=!1:n.area=(n.bottom-n.top)*(n.right-n.left)}return n},r=function(t,e){if(e){var n=o(t);n&amp;&amp;f.push({url:e,area:n.area,rect:n})}},d=function(){for(var n=a.getElementsByTagName(&quot;*&quot;),i=/url\(.*(http.*)\)/gi,d=0;d&lt;n.length;d++){var s=n[d],c=t.getComputedStyle(s);if(&quot;IMG&quot;==s.tagName&amp;&amp;r(s,s.src),c[&quot;background-image&quot;]){i.lastIndex=0;var m=i.exec(c[&quot;background-image&quot;]);m&amp;&amp;m.length&gt;1&amp;&amp;r(s,m[1].replace('&quot;',&quot;&quot;))}if(&quot;IFRAME&quot;==s.tagName)try{var u=o(s);if(u){var h=e(s.contentWindow);h&amp;&amp;f.push({tm:h,area:u.area,rect:u})}}catch(v){}}},s=function(){for(var e={},n=t.performance.getEntriesByType(&quot;resource&quot;),i=0;i&lt;n.length;i++)e[n[i].name]=n[i].responseEnd;for(var a=0;a&lt;f.length;a++)&quot;tm&quot;in f[a]||(f[a].tm=void 0!==e[f[a].url]?e[f[a].url]:0)},c=function(){if(&quot;msFirstPaint&quot;in t.performance.timing&amp;&amp;(n=t.performance.timing.msFirstPaint-l),&quot;chrome&quot;in t&amp;&amp;&quot;loadTimes&quot;in t.chrome){var e=t.chrome.loadTimes();if(&quot;firstPaintTime&quot;in e&amp;&amp;e.firstPaintTime&gt;0){var i=e.startLoadTime;&quot;requestTime&quot;in e&amp;&amp;(i=e.requestTime),e.firstPaintTime&gt;=i&amp;&amp;(n=1e3*(e.firstPaintTime-i))}}if(void 0===n||0&gt;n||n&gt;12e4){n=t.performance.timing.responseStart-l;for(var o={},r=a.getElementsByTagName(&quot;head&quot;)[0].children,d=0;d&lt;r.length;d++){var s=r[d];&quot;SCRIPT&quot;==s.tagName&amp;&amp;s.src&amp;&amp;!s.async&amp;&amp;(o[s.src]=!0),&quot;LINK&quot;==s.tagName&amp;&amp;&quot;stylesheet&quot;==s.rel&amp;&amp;s.href&amp;&amp;(o[s.href]=!0)}for(var c=t.performance.getEntriesByType(&quot;resource&quot;),m=!1,u=0;u&lt;c.length;u++)if(m||!o[c[u].name]||&quot;script&quot;!=c[u].initiatorType&amp;&amp;&quot;link&quot;!=c[u].initiatorType)m=!0;else{var f=c[u].responseEnd;(void 0===n||f&gt;n)&amp;&amp;(n=f)}}n=Math.max(n,0)},m=function(){for(var e={0:0},i=0,o=0;o&lt;f.length;o++){var r=n;&quot;tm&quot;in f[o]&amp;&amp;f[o].tm&gt;n&amp;&amp;(r=f[o].tm),void 0===e[r]&amp;&amp;(e[r]=0),e[r]+=f[o].area,i+=f[o].area}var d=Math.max(a.documentElement.clientWidth,t.innerWidth||0)*Math.max(a.documentElement.clientHeight,t.innerHeight||0);if(d&gt;0&amp;&amp;(d=Math.max(d-i,0)*v,void 0===e[n]&amp;&amp;(e[n]=0),e[n]+=d,i+=d),i){for(var s in e)e.hasOwnProperty(s)&amp;&amp;h.push({tm:s,area:e[s]});h.sort(function(t,e){return t.tm-e.tm});for(var c=0,m=0;m&lt;h.length;m++)c+=h[m].area,h[m].progress=c/i}},u=function(){if(h.length){i=0;for(var t=0,e=0,a=0;a&lt;h.length;a++){var o=h[a].tm-t;o&gt;0&amp;&amp;1&gt;e&amp;&amp;(i+=(1-e)*o),t=h[a].tm,e=h[a].progress}}else i=n},f=[],h=[],v=.1;try{var l=t.performance.timing.navigationStart;d(),s(),c(),m(),u()}catch(p){}return void 0!==i?parseInt(i):-1},n={set:function(e,n,i,a,o){e=t.cookie_pre+e,o=o?&quot;; path=&quot;+o:&quot;/&quot;,a=a?&quot;;domain=&quot;+a:&quot;&quot;;var r=new Date;r.setTime(r.getTime()+24*i*60*60*1e3);var d=&quot;expires=&quot;+r.toUTCString();document.cookie=e+&quot;=&quot;+n+&quot;; &quot;+d+o+a},hasKey:function(e){var n;return e=t.cookie_pre?t.cookie_pre+e:e,n=document.cookie.match(new RegExp(&quot;(^| )&quot;+e+&quot;=&quot;)),null!==n},get:function(e,n){e=(n||t.cookie_pre)+e+&quot;=&quot;;for(var i=document.cookie.split(&quot;;&quot;),a=0;a&lt;i.length;a++){for(var o=i[a];&quot; &quot;==o.charAt(0);)o=o.substring(1);if(-1!=o.indexOf(e))return o.substring(e.length,o.length)}return&quot;&quot;},list:function(){for(var e=document.cookie.split(&quot;;&quot;),n=[],i=0;i&lt;e.length;i++){for(var a=e[i];&quot; &quot;==a.charAt(0);)a=a.substring(1);if(-1!=a.indexOf(t.cookie_pre)){var o=a.split(&quot;=&quot;),r=o[0],d=o[1];r&amp;&amp;(r=r.replace(t.cookie_pre,&quot;&quot;)),n.push({key:r,value:d})}}return n},remove:function(t,e,n){this.hasKey(t)&amp;&amp;this.set(t,&quot;&quot;,-1,n,e)},clear:function(){for(var t=this.list(),e=0,n=t.length;n&gt;e;e++)this.remove(t[e].key)}},i={save:function(t,e,i){var a=location.host.split(&quot;.&quot;),o=&quot;&quot;;a=a.slice(a.length-2),a.unshift(&quot;&quot;),o=a.join(&quot;.&quot;),n.set(t,e,i||1,o,&quot;/&quot;)},get:function(t,e){return n.get(t,e)},remove:function(t,e){n.remove(t,&quot;/&quot;)},clear:function(){n.clear()}},a={url:&quot;https://apm.douyucdn.cn/deliver/perform&quot;},o=function(){var t=window.performance&amp;&amp;window.performance.timing||null;t&amp;&amp;this.performanceBinder()};o.prototype={odata:[{name:&quot;did&quot;,nick:&quot;d&quot;,value:function(){var t=window.$SYS||{};return i.get(&quot;did&quot;,t.cookie_pre)||&quot;&quot;}},{name:&quot;uid&quot;,nick:&quot;i&quot;,value:function(){var t=window.$SYS||{};return i.get(&quot;uid&quot;,t.cookie_pre)||0}},{name:&quot;rid&quot;,nick:&quot;rid&quot;,value:function(){return window.$ROOM&amp;&amp;$ROOM.room_id?$ROOM.room_id:0}},{name:&quot;url&quot;,nick:&quot;u&quot;,value:location.pathname},{name:&quot;refer&quot;,nick:&quot;ru&quot;,value:document.referrer},{name:&quot;action_code&quot;,nick:&quot;ac&quot;,value:&quot;browser_apm&quot;},{name:&quot;ref_page_code&quot;,nick:&quot;rpc&quot;,value:&quot;&quot;},{name:&quot;page_code&quot;,nick:&quot;pc&quot;,value:&quot;&quot;},{name:&quot;page_t&quot;,nick:&quot;pt&quot;,value:function(){return 0}},{name:&quot;occur_t&quot;,nick:&quot;oct&quot;,value:function(){return parseInt((new Date).getTime(),10)}},{name:&quot;duration&quot;,nick:&quot;dur&quot;,value:function(){return 0}},{name:&quot;pro_code&quot;,nick:&quot;pro&quot;,value:function(){return&quot;host_site&quot;}},{name:&quot;ct_code&quot;,nick:&quot;ct&quot;,value:&quot;web&quot;},{name:&quot;ext&quot;,nick:&quot;e&quot;,value:&quot;&quot;}],keys:[{name:&quot;domain&quot;,alias:&quot;do&quot;,value:a.domain||window.location.host},{name:&quot;browserType&quot;,alias:&quot;bws&quot;,value:function(){return this.detectBrowser()}},{name:&quot;DNSQueryTime&quot;,alias:&quot;clc&quot;,value:function(){return void 0===this.t.domainLookupEnd||void 0===this.t.domainLookupStart?-1:this.t.domainLookupEnd-this.t.domainLookupStart}},{name:&quot;TTFB&quot;,alias:&quot;ttfb&quot;,value:function(){return void 0===this.t.responseStart||void 0===this.t.navigationStart?-1:this.t.responseStart-this.t.navigationStart}},{name:&quot;BadTime&quot;,alias:&quot;dl&quot;,value:function(){return void 0===this.t.domLoading||void 0===this.t.fetchStart?-1:this.t.domLoading-this.t.fetchStart}},{name:&quot;operableTime&quot;,alias:&quot;dcle&quot;,value:function(){return void 0===this.t.domContentLoadedEventEnd||void 0===this.t.navigationStart?-1:this.t.domContentLoadedEventEnd-this.t.navigationStart}},{name:&quot;loadingCompletedTime&quot;,alias:&quot;pl&quot;,value:function(){return void 0===this.t.loadEventEnd||void 0===this.t.navigationStart?-1:this.t.loadEventEnd-this.t.navigationStart}},{name:&quot;domParse&quot;,alias:&quot;dp&quot;,value:function(){return void 0===this.t.domInteractive||void 0===this.t.domLoading?-1:this.t.domInteractive-this.t.domLoading}},{name:&quot;firstPaint&quot;,alias:&quot;fp&quot;,value:function(){return void 0!==this.entries?void 0===this.entries.filter(function(t){return&quot;first-paint&quot;===t.name})[0]?-1:this.entries.filter(function(t){return&quot;first-paint&quot;===t.name})[0].startTime.toFixed(0):-1}},{name:&quot;domcontentLoaded&quot;,alias:&quot;dcld&quot;,value:function(){return void 0===this.t.domContentLoadedEventEnd||void 0===this.t.navigationStart?-1:this.t.domContentLoadedEventEnd-this.t.navigationStart}},{name:&quot;domCount&quot;,alias:&quot;dc&quot;,value:function(){return document?void 0===document.getElementsByTagName(&quot;*&quot;).length?-1:document.getElementsByTagName(&quot;*&quot;).length:-1}},{name:&quot;tcpConnect&quot;,alias:&quot;tcp&quot;,value:function(){return void 0===this.t.connectEnd||void 0===this.t.connectStart?-1:this.t.connectEnd-this.t.connectStart}},{name:&quot;speedIndex&quot;,alias:&quot;si&quot;,value:function(){return void 0===this.RUMSpeedIndex?-1:this.RUMSpeedIndex}},{name:&quot;domContentLoad&quot;,alias:&quot;dcl&quot;,value:function(){return void 0===this.t.domContentLoadedEventStart||void 0===this.t.domLoading?-1:this.t.domContentLoadedEventStart-this.t.domLoading}},{name:&quot;domComplete&quot;,alias:&quot;dcp&quot;,value:function(){return void 0===this.t.domComplete||void 0===this.t.domLoading?-1:this.t.domComplete-this.t.domLoading}}],performanceBinder:function(){var t=this;window.onload=function(){setTimeout(function(){t.performance()},0)}},performance:function(){var t=window.performance.timing;if(!(t.loadEventEnd&lt;=0||t.navigationStart&lt;=0||t.loadEventEnd&lt;=t.navigationStart)){var e,n,i=this,o={},r={};r=i.makeOdata(i,arguments),e=i.makePerformanceInit.apply(i,arguments),r.e=e,o.multi=[r],o.v=1.5,n=a.url,i.send(&quot;POST&quot;,n,o)}},defval:function(t){return&quot;function&quot;==typeof t?t.call(this):t},makePerformanceInit:function(){this.t=window.performance.timing,void 0!==window.performance.getEntries?this.entries=window.performance.getEntries():this.entries=void 0,this.RUMSpeedIndex=e();var t={};for(var n in this.keys)t[this.keys[n].alias]=this.defval(this.keys[n].value);return t},makeOdata:function(){var t={};for(var e in this.odata)t[this.odata[e].nick]=this.defval(this.odata[e].value);return t},detectBrowser:function(){var t,e={},n=navigator.userAgent.toLowerCase();return(t=n.match(/msie ([\d.]+)/))?e.ie=t[1]:(t=n.match(/firefox\/([\d.]+)/))?e.firefox=t[1]:(t=n.match(/chrome\/([\d.]+)/))?e.chrome=t[1]:(t=n.match(/opera.([\d.]+)/))?e.opera=t[1]:(t=n.match(/version\/([\d.]+).*safari/))?e.safari=t[1]:0,!e.ie&amp;&amp;n.match(/trident/)&amp;&amp;(e.ie=n.match(/rv:([\d].)/)[1]),n.match(/edge\/([(\d).]+)/)&amp;&amp;(e.edge=n.match(/edge\/([(\d).]+)/)[1]),this.Sys=e,e.ie?&quot;IE: &quot;+e.ie:e.edge?&quot;Edge: &quot;+e.edge:e.firefox?&quot;Firefox: &quot;+e.firefox:e.chrome&amp;&amp;!document.getBoxObjectFor?&quot;Chrome: &quot;+e.chrome:e.opera?&quot;Opera: &quot;+e.opera:e.safari?&quot;Safari: &quot;+e.safari:void 0},param:function(t){var e=[];for(var n in t)e.push(n+&quot;=&quot;+escape(JSON.stringify(t[n])));return e.join(&quot;&amp;&quot;)},send:function(t,e,n,i,a){var o=null;if(window.XMLHttpRequest){o=new XMLHttpRequest,this.Sys&amp;&amp;this.Sys.ie&amp;&amp;this.Sys.ie&lt;10&amp;&amp;(o=new window.XDomainRequest);var t=t.toUpperCase(),r=Math.random();if(&quot;GET&quot;==t){var d=this.param(n);n?o.open(&quot;GET&quot;,e+&quot;?&quot;+d,!0):o.open(&quot;GET&quot;,e+&quot;?t=&quot;+r,!0),o.send()}else&quot;POST&quot;==t&amp;&amp;(o.open(&quot;POST&quot;,e,!0),o.send(this.param(n)));o.onreadystatechange=function(){4==o.readyState&amp;&amp;(200==o.status?&quot;function&quot;==typeof i&amp;&amp;i(o.responseText):&quot;function&quot;==typeof a&amp;&amp;a(o.status))}}}},window.DYL=new o}();</find>
+      <find>douyu/page/room/</find>
+      <find>page/room/normal/mod/gift-queue</find>
+      <find>struct.ar</find>
+      <find>$</find>
+      <find>$.</find>
+      <find>AutoGiveGift</find>
+      <find>trea</find>
+      <find>chainManager</find>
+      <find>treasure</find>
+      <find>AutoGetGift</find>
+      <find>switchStates.</find>
+      <find>ForbidTipCP</find>
+      <find>timehoo</find>
+      <find>mapItem</find>
+      <find>1e3 * (Math.floor(5 * Math.random()) + 1)</find>
+      <find>console.log(</find>
+      <find>RemoveBoxDelay</find>
+      <find>douyu/page/room/webm/mod/gift/view/treasure</find>
+      <find>2.1.0</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>lastCheckLiving</replace>
+      <replace>let</replace>
+      <replace>data</replace>
+      <replace>observer</replace>
+      <replace>chatControlBtn</replace>
+      <replace>div</replace>
+      <replace>event</replace>
+      <replace>window['$ROOM']</replace>
+      <replace>var</replace>
+      <replace>dayOrMin</replace>
+      <replace>window.$(</replace>
+      <replace>window.$.</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/content.js" />
+        <option value="$PROJECT_DIR$/background.js" />
+        <option value="$PROJECT_DIR$/popup.js" />
+        <option value="$PROJECT_DIR$/page.js" />
+        <option value="$PROJECT_DIR$/js/mod-all.js" />
+        <option value="$PROJECT_DIR$/js/jquery1.11.3.js" />
+        <option value="$PROJECT_DIR$/js/device.js" />
+        <option value="$PROJECT_DIR$/js/_shark-all.js" />
+        <option value="$PROJECT_DIR$/js/_device.js" />
+        <option value="$PROJECT_DIR$/background.html" />
+        <option value="G:/Users/Desktop/a.html" />
+        <option value="$PROJECT_DIR$/js/popupModule.js" />
+        <option value="$PROJECT_DIR$/js/content.js" />
+        <option value="$PROJECT_DIR$/js/util.js" />
+        <option value="$PROJECT_DIR$/../test2/test.html" />
+        <option value="$PROJECT_DIR$/js/const.js" />
+        <option value="G:/Users/Downloads/周鹏的简历.html" />
+        <option value="$PROJECT_DIR$/css/iconfont.css" />
+        <option value="$PROJECT_DIR$/css/popup.scss" />
+        <option value="$PROJECT_DIR$/popup.html" />
+        <option value="$PROJECT_DIR$/js/popup.js" />
+        <option value="$PROJECT_DIR$/js/background.js" />
+        <option value="$PROJECT_DIR$/js/page.js" />
+        <option value="$PROJECT_DIR$/js/_dyl.js" />
+        <option value="$PROJECT_DIR$/css/page.scss" />
+        <option value="$PROJECT_DIR$/manifest.json" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1932" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>General</id>
+          </State>
+          <State>
+            <id>Pug/Jade</id>
+          </State>
+          <State>
+            <id>RegExp</id>
+          </State>
+          <State>
+            <id>XML</id>
+          </State>
+          <State>
+            <id>XPath</id>
+          </State>
+        </expanded-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="196ExtNew" type="b2602c69:ProjectViewProjectNode" />
+              <item name="196ExtNew" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="196ExtNew" type="b2602c69:ProjectViewProjectNode" />
+              <item name="196ExtNew" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="196ExtNew" type="b2602c69:ProjectViewProjectNode" />
+              <item name="196ExtNew" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="page.scss" type="620a8d5e:NestingTreeNode" />
+            </path>
+            <path>
+              <item name="196ExtNew" type="b2602c69:ProjectViewProjectNode" />
+              <item name="196ExtNew" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="popup.scss" type="620a8d5e:NestingTreeNode" />
+            </path>
+            <path>
+              <item name="196ExtNew" type="b2602c69:ProjectViewProjectNode" />
+              <item name="196ExtNew" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="196ExtNew" type="b2602c69:ProjectViewProjectNode" />
+              <item name="196ExtNew" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="G:/Users/Desktop/网站方案/SK2备份/www" />
+    <property name="nodejs_interpreter_path" value="G:/Program Files/NodeJs/node" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\Document\SourceFile\Web\196ExtNew\css" />
+      <recent name="G:\Document\SourceFile\Web\196ExtNew\js" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b719c0b2-4ab6-4bd2-82a2-74a1fa09e4b5" name="Default" comment="" />
+      <created>1504793525311</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1504793525311</updated>
+      <workItem from="1504793526765" duration="4764000" />
+      <workItem from="1504937211778" duration="3095000" />
+      <workItem from="1505368698763" duration="5000" />
+      <workItem from="1505489355173" duration="15437000" />
+      <workItem from="1506498338283" duration="12000" />
+      <workItem from="1511693773743" duration="1317000" />
+      <workItem from="1512634095913" duration="71101000" />
+      <workItem from="1513171155259" duration="105662000" />
+      <workItem from="1513783614353" duration="13397000" />
+      <workItem from="1513867418502" duration="32473000" />
+      <workItem from="1514104358838" duration="9177000" />
+      <workItem from="1514338978780" duration="5251000" />
+      <workItem from="1515302600936" duration="52070000" />
+      <workItem from="1515990642271" duration="33000" />
+      <workItem from="1516258954422" duration="16597000" />
+      <workItem from="1517054113611" duration="7483000" />
+      <workItem from="1517715812186" duration="2809000" />
+      <workItem from="1518351915929" duration="4766000" />
+      <workItem from="1520402806004" duration="2043000" />
+      <workItem from="1520672946937" duration="4723000" />
+      <workItem from="1524707920747" duration="626000" />
+      <workItem from="1525437999156" duration="707000" />
+      <workItem from="1527861186001" duration="6806000" />
+      <workItem from="1528463517265" duration="1336000" />
+      <workItem from="1529135294141" duration="4993000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="366683000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24288724" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49578503" weight="0.32934782" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50421494" side_tool="true" weight="0.32934782" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32934782" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32897604" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32934782" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/popup.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/popupModule.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="2" lean-forward="true" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/popup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="48" lean-forward="true" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/background.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="22" lean-forward="true" selection-start-column="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/popup.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1292">
+          <caret line="68" column="27" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manifest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/popup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="2" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/popup.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1064">
+          <caret line="56" column="26" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/popup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manifest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/popup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="2" lean-forward="true" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="2" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/popup.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1064">
+          <caret line="56" column="26" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/popup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/popup.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/popup.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/popup.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="722">
+          <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content.js" />
+    <entry file="file://$PROJECT_DIR$/background.js" />
+    <entry file="file://$PROJECT_DIR$/popup.js" />
+    <entry file="file://$PROJECT_DIR$/page.js" />
+    <entry file="file://$PROJECT_DIR$/js/angular.min.js" />
+    <entry file="file://$PROJECT_DIR$/js/mod-all.js" />
+    <entry file="file://$PROJECT_DIR$/css/page.css.map">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+        </state>
+      </provider>
+      <provider editor-type-id="sourcemapFileViewerProvider" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery1.11.3.js" />
+    <entry file="file://$PROJECT_DIR$/js/_shark-all.js" />
+    <entry file="file://$PROJECT_DIR$/js/_device.js" />
+    <entry file="file://$PROJECT_DIR$/background.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../196 Multifunctional 2.0.0 - 副本/js/page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="483" column="25" selection-start-line="483" selection-start-column="25" selection-end-line="483" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/Users/Desktop/a.html" />
+    <entry file="file://G:/Users/Desktop/mod-all.js" />
+    <entry file="file://$PROJECT_DIR$/css/popup.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="126" column="14" selection-start-line="126" selection-start-column="14" selection-end-line="126" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../test2/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/content.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1881">
+          <caret line="99" column="14" selection-start-line="99" selection-start-column="14" selection-end-line="99" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/page.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/angular.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="722">
+          <caret line="38" column="21" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/popupModule.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/Users/Downloads/周鹏的简历.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="782" column="139" selection-start-line="782" selection-start-column="139" selection-end-line="782" selection-end-column="139" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/iconfont.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/popup.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5054">
+          <caret line="266" column="19" selection-start-line="266" selection-start-column="19" selection-end-line="266" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/const.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/popup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/popup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="830">
+          <caret line="48" column="57" selection-start-line="48" selection-start-column="57" selection-end-line="48" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/background.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="144" column="120" lean-forward="true" selection-start-line="144" selection-start-column="120" selection-end-line="144" selection-end-column="120" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="53" column="13" lean-forward="true" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
+          <folding>
+            <marker date="1529137463351" expanded="true" signature="13772:13821" ph="..." />
+            <marker date="1529137463351" expanded="true" signature="13772:14139" ph="..." />
+            <marker date="1529137463351" expanded="true" signature="13772:14296" ph="..." />
+            <marker date="1529137463351" expanded="true" signature="13822:13876" ph="..." />
+            <marker date="1529137463351" expanded="true" signature="13822:14029" ph="..." />
+            <marker date="1529137463351" expanded="true" signature="13877:13969" ph="..." />
+            <marker date="1529137463351" expanded="true" signature="13877:13970" ph="..." />
+            <marker date="1529137463351" expanded="true" signature="14140:14276" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/page.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/_dyl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manifest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
