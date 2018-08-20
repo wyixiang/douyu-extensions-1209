@@ -6,7 +6,7 @@ html, body {
 body {
   width: 350px;
   height: 550px;
-  background: #bee1fa url(/res/lapped.png);
+  background: #ffffff;
   font-family: "Segoe UI", Arial, "Microsoft Yahei", sans-serif; }
 
 .head {
@@ -33,7 +33,7 @@ body {
     transition: all .1s linear;
     text-align: center;
     box-sizing: border-box;
-    padding-top: 15px;
+    padding-top: 20px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); }
     .head .click:hover {
       background: rgba(0, 0, 0, 0.5);
@@ -110,49 +110,45 @@ body {
   position: relative;
   top: 5px;
   float: left;
-  height: 30px;
-  width: 80px;
-  margin-right: 15px;
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5), 0 0 5px rgba(0, 0, 0, 0.2);
-  border-radius: 5%;
-  background: rgba(0, 0, 0, 0.1);
-  color: #fff; }
+  width: 52px;
+  height: 31px;
+  border-radius: 20px;
+  background: #fdfdfd;
+  color: #fff;}
   *[switch] .back {
+    top: 5px;
+    float: left;
+    width: 52px;
+    height: 31px;
+    border: 1px solid #dfdfdf;
+    background-color: #fdfdfd;
+    box-shadow: #dfdfdf 0 0 0 0 inset;
+    border-radius: 20px;
+    background-clip: content-box;
+    -webkit-appearance: none;
+    user-select: none;
+    outline: none;
+    transition: background-color ease 0.4s; }
+  *[switch] .back .item {
+    content: '';
+    width: 29px;
+    height: 29px;
     position: absolute;
-    top: 3px;
-    left: 3px;
-    height: calc(100% - 6px);
-    width: calc(100% - 6px);
-    background: #f06e87;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.4), 0 0 5px rgba(255, 255, 255, 0.2);
-    border-radius: 5%;
-    line-height: 24px;
-    cursor: pointer;
-    filter: brightness(0.95);
-    transition: all .1s linear; }
-    *[switch] .back div:not(.item) {
-      float: left;
-      display: inline-block;
-      height: 100%;
-      width: 50%;
-      text-align: center; }
-    *[switch] .back .item {
-      position: absolute;
-      top: 0;
-      left: 37px;
-      height: 24px;
-      width: 37px;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
-      border-radius: 6%;
-      background: #f06e87 url(/res/item.png);
-      transition: all .1s linear; }
-    *[switch] .back:hover {
-      filter: brightness(1); }
-    *[switch] .back.switched {
-      background-color: #69d7eb; }
-      *[switch] .back.switched .item {
-        background-color: #69d7eb;
-        left: 0; }
+    top: 2px;
+    left: 1px;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    transition: left 0.3s; }
+  *[switch] .back.switched {
+    border-color: #64bd63;
+    box-shadow: #64bd63 0 0 0 16px inset;
+    background-color: #64bd63;
+    box-shadow: #dfdfdf 0 0 0 0 inset;
+    transition: border-color 0.4s, background-color ease 0.4s; }
+  *[switch] .back.switched .item {
+    left: 24px;
+    transition: left 0.3s; }
 
 .configDrop {
   transition: all .1s linear;

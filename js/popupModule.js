@@ -23,8 +23,8 @@ app.directive('switch', [function () {
         template:
         '<div ng-click="onClick()">' +
         ' <div class="back cantSelect" ng-class="{ switched: switched }">' +
-        '  <div>NO</div>' +
-        '  <div>YES</div>' +
+        //'  <div>NO</div>' +
+        //'  <div>YES</div>' +
         '  <div class="item"></div>' +
         ' </div>' +
         '</div>',

@@ -15,10 +15,10 @@
     <div class="head">
         <div class="cover"></div>
         <div class="imgHead"></div>
-        <div class="click" ng-click="openUrl('https://www.douyu.com/196')">小缘喵<br>の<br>直播间</div>
+        <div class="click" ng-click="openUrl('https://www.douyu.com/1209')">大头<br>直播间</div>
     </div>
     <div class="switchList">
-        <div class="switchItem" ng-repeat="switchName in getSwitchList()">
+        <div class="switchItem" ng-repeat="switchName in getSwitchList()" style="border: solid transparent">
             <div switch="switchStates[switchName]" state-change="switch(switchName, switched)"></div>
             <div class="switchTip" title="{{ CONST.Switch[switchName]['tip'] }}" ng-class="{ canClick: CONST.Switch[switchName]['config'] }">
                 <div ng-click="openConfig(switchName)">
@@ -52,7 +52,7 @@
         </div>
     </div>
     <div class="bottom">
-        联系作者: whitemind@qq.com
+        联系作者: yixiangw@foxmail.com
     </div>
 </body>
 </html>

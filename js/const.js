@@ -22,7 +22,7 @@ var Switch = {
     RemoveBoxDelay: { CN: "移除箱子延迟", index: 5, tip: "斗鱼的箱子会随机附加加载延迟\n开启后, 该延迟将被强制设置为0" },
     AutoGiveGift: { CN: "所有礼物都允许批量赠送", index: 6, tip: "开启后, 鼠标移到礼物上, 会触发自动送礼面板", config: true },
     ChatController: { CN: "启用聊天室控制台", index: 7, tip: "开启后, 直播间聊天室将新增一个图标\n鼠标移致该图标上方将可展开一些聊天室的扩展功能\n不启用控制台会使控制台相关的功能都自动禁用" },
-    GetBoxHelp: { CN: "开宝箱辅助", index: 8, tip: "开启后, 将出现当日开的宝箱计数\n在计数小于99时, 有新的箱子需要验证, \n会发出提示音, 并且该页面标题将提示\n计数 ≥ 99时将废置自动领取功能", config: true },
+    GetBoxHelp: { CN: "开宝箱辅助", index: 8, tip: "开启后, 将出现当日的宝箱计数，斗鱼每日领取上限为100个\n有新的箱子需要验证, 发出提示音, 并且该页面标题将提示", config: true },
 
     ChatAt: { CN: "开启AT功能", index: 100, type: 'chat', tip: "开启后任意人都可以AT你 (你在聊天室才可收到), @Name即可AT别人(插件使用者)\n同时用户信息面板将增加一个按钮'@此人', 点击后会在聊天框自动输入" },
     OnlyAdminAt: { CN: "仅允许管理员AT我", index: 101, type: 'chat', tip: "管理员指主播/房管/超管" },
@@ -39,10 +39,12 @@ var Switch = {
 var defaultSwitchStates = {
     AdBlock: true,
     ForbidTipCP: true,
+    AutoGetGift: true,
     RemoveBoxDelay: true,
     AutoGiveGift: true,
     ChatController: true,
-    ChatAt: true
+    ChatAt: true,
+    GetBoxHelp: true
 };
 
 var SoundList = ["ding.wav", "biu.wav", "干杯.mp3", "baka.mp3", "卟卟.mp3", "短信.mp3", "rua.mp3"];

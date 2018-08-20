@@ -319,7 +319,7 @@ function forceMute(name, roomId, dayOrMin) {
 }
 
 function checkGiftAndGet() {
-    if (!switchStates.AutoGetGift || (switchStates.GetBoxHelp && config.boxLog.count >= 99))
+    if (!switchStates.AutoGetGift )//|| (switchStates.GetBoxHelp && config.boxLog.count > 100)
         return;
 
     if(elmPeckCdn.textContent === "领取" && $(".peck-check-box").is(':hidden')) setTimeout(function(){
