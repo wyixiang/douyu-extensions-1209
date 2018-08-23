@@ -20,7 +20,7 @@ var Switch = {
     LiveTip: { CN: "开播提醒 - 点击设置", index: 3, tip: "开启后, 在列表内的主播开播时将会提醒\n点击开播提示可直接进入直播间\n(无需打开页面, 后台监听是否开播)", config: true },
     AutoGetGift: { CN: "自动领取礼物箱子", index: 4, tip: "开启后, 在箱子可领取时, 将会自动点击\n(如果弹出验证码, 需用户手动验证)" },
     RemoveBoxDelay: { CN: "移除箱子延迟", index: 5, tip: "斗鱼的箱子会随机附加加载延迟\n开启后, 该延迟将被强制设置为0" },
-    AutoGiveGift: { CN: "所有礼物都允许批量赠送", index: 6, tip: "开启后, 鼠标移到礼物上, 会触发自动送礼面板", config: true },
+    AutoGiveGift: { CN: "所有礼物都允许批量赠送", index: 6, tip: "开启后, 鼠标移到礼物上, 会触发自动送礼面板"},
     ChatController: { CN: "启用聊天室控制台", index: 7, tip: "开启后, 直播间聊天室将新增一个图标\n鼠标移致该图标上方将可展开一些聊天室的扩展功能\n不启用控制台会使控制台相关的功能都自动禁用" },
     GetBoxHelp: { CN: "开宝箱辅助", index: 8, tip: "开启后, 将出现当日的宝箱计数，斗鱼每日领取上限为100个\n有新的箱子需要验证, 发出提示音, 并且该页面标题将提示", config: true },
 
@@ -38,6 +38,7 @@ var Switch = {
 
 var defaultSwitchStates = {
     AdBlock: true,
+    ForbidAutoJump: true,
     ForbidTipCP: true,
     AutoGetGift: true,
     RemoveBoxDelay: true,
@@ -51,7 +52,7 @@ var SoundList = ["ding.wav", "biu.wav", "干杯.mp3", "baka.mp3", "卟卟.mp3", 
 
 var defaultConfig = {
     liveTipList: [],
-    extAdmin: ["小缘", "WhiteMind"],
+    extAdmin: ["纳豆nado"],
     boxLog: { count: 0, date: '' },
     soundIndex: 0,
     soundVolume: 10,
