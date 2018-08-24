@@ -57,7 +57,7 @@ function onMsg(data, sender, ret) {
 function sendMsgToContent(data, callback) {
     if (typeof data !== 'object')
         data = { type: data };
-    chrome.tabs.query({ url: "https://www.douyu.com/*" }, function(tabs){
+        chrome.tabs.query({ url: "https://www.douyu.com/*" }, function(tabs){
         tabs.forEach(function (tab) {
             chrome.tabs.sendMessage(tab.id, data, callback);
         });

@@ -7,6 +7,8 @@ LS.Load("switchStates", {}, function (val) {
         if (Switch.hasOwnProperty(name))
             onSwitchChange(name, switchStates[name]);
     }
+    if (switchStates.AutoGiveGift)
+	    flashReady();
 });
 LS.Load("config", {}, function (val) {
     Object.assign(defaultConfig, val);
@@ -26,6 +28,7 @@ chrome.extension.onMessage.addListener(onBackOrPopupMsg);
 ImportScriptToPage("js/const.js");
 ImportScriptToPage("js/util.js");
 ImportStyleToPage("css/page.css");
+ImportStyleToPage("css/gift.css");
 $(document).ready(ImportScriptToPage.bind(window, "js/page.js"));
 
 function onSwitchChange(name, switched) {
@@ -67,7 +70,7 @@ function onPageMsg(data) {
     switch (data.type) {
         case MSG_TYPE.InitData:
             sendMsgToPage({ type: MSG_TYPE.InitData, data: {
-                iconUrl: chrome.extension.getURL("res/icon.png"),
+                iconUrl: chrome.extension.getURL("res/dan.png"),
                 wavDing: chrome.extension.getURL("res/ding.wav"),
                 ChatSwitchList: getChatSwitchList()
             } });

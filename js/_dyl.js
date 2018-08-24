@@ -23,75 +23,7 @@ function define_HOOK() {
         }
 
         var struct, dataPropName;
-        if (moduleName === "douyu/page/room/normal/mod/gift" || moduleName === "douyu/page/room/webm/mod/gift") {
-            struct = resolveFun(moduleFun);
-            dataPropName = struct.codes.match(/\.find\('\[data-type="gift-info-panel"]'\);(.)\.panelWidth/)[1];
-
-            struct.codes = struct.codes.replace(
-                /currentGiftId&&.\.getGift\(\)\.done\(function\(.\){/,
-                function (matched) {
-                    return matched + '\
-                        e = arguments[0];\
-                        for(var gid in e) {\
-                            if (switchStates.AutoGiveGift) {\
-                                if(!e[gid].batch_preset) {\
-                                    e[gid].batch_preset_src = e[gid].batch_preset;\
-                                    e[gid].batch_preset = [191, 1333].indexOf(Number(gid)) === -1 ? "10,66,196,520,1314" : "196,520,831,1314,2196,3344,9999";\
-                                }\
-                            } else {\
-                                if(e[gid].hasOwnProperty("batch_preset_src")) {\
-                                    e[gid].batch_preset = e[gid].batch_preset_src;\
-                                    delete e[gid].batch_preset_src;\
-                                }\
-                            }\
-                        }\
-                    ';
-                }
-            );
-            struct.codes = struct.codes.replace(
-                ".animate({width:" + dataPropName + ".panelWidth",
-                ".animate({width: [191, 1333].indexOf(Number(" + dataPropName + ".currentGiftId)) === -1 ? " + dataPropName + ".panelWidth : 'auto'"
-            );
-            struct.codes = struct.codes.replace(
-                /(.)\.giftSend\(({target:.,number:.\.currentNumber\|\|0,batch:1})\)/,
-                function (matched, self, opt) {
-                    return '(function(opt){\
-                        var self = ' + self + ';\
-                        var obs = ' + struct.args.split(',')[2] + ';\
-                        if (window.config && window.config["QuickGift"]) {\
-                            var target = window.$(opt.target);\
-                            var data = {\
-                                gid: target.data("giftid"),\
-                                send: target.data("send"),\
-                                exp: target.data("exp"),\
-                                count: opt.number,\
-                                sid: window.$SYS.uid,\
-                                did: window.$ROOM.owner_uid,\
-                                rid: window.$ROOM.room_id,\
-                                batch: opt.batch,\
-                                num: 1\
-                            };\
-                            var sendFun = self[data.send == 1 ? "sendYW" : "sendYC"].bind(self, data);\
-                            function batchSend(num) {\
-                                if (num <= 0) return;\
-                                sendFun();\
-                                setTimeout(batchSend.bind(this, num - 1), 100);\
-                            }\
-                            batchSend(data.count);\
-                            self.doms.giftInfoPanel.stop(!0, !0).hide().addClass("out");\
-                            setTimeout(function(){ obs.trigger("mod.gift.batch.switch.open") }, 500);\
-                        } else {\
-                            self.giftSend(opt);\
-                        }\
-                    })(' + opt + ')';
-                }
-            );
-            arguments[Array.from(arguments).indexOf(moduleFun)] = parseFun(struct);
-        } else if (moduleName === "douyu/page/room/normal/mod/gift-queue" || moduleName === "douyu/page/room/webm/mod/gift-queue"){
-            struct = resolveFun(moduleFun);
-
-            arguments[Array.from(arguments).indexOf(moduleFun)] = parseFun(struct);
-        } else if (moduleName === "douyu/page/room/normal/mod/backpack" || moduleName === "douyu/page/room/webm/mod/backpack") {
+        if (moduleName === "douyu/page/room/normal/mod/backpack" || moduleName === "douyu/page/room/webm/mod/backpack") {
             struct = resolveFun(moduleFun);
             dataPropName = struct.codes.match(/useProp:function\(.\){if\(!(.)\.sending\)/)[1];
             var observerPropName = struct.args.split(",")[1];
@@ -99,14 +31,10 @@ function define_HOOK() {
             struct.codes = struct.codes.replace(
                 '内可连击</span>\',"    </div>",',
                 '内可连击</span>\',"    </div>",\'\
-                    <% batchPreset = [10,66,196,520,1314]; %>\
-                    <% if ( AutoGiveGift ) { %>\
+                    <% batchPreset = [10,66,520]; %>\
+                    <% if ( AutoGiveGift && prop.count>9 ) { %>\
                         <div class="gift-info-panel-give gift-info-panel-give-not-explain" data-type="gift-info-give">\
-                            <div class="gift-info-panel-form" style="display: block" data-gid="<%=giftid%>" data-type="gift-info-panel-form">\
-                                <% for (var i = 0, length = batchPreset.length; i < length; i++) { %>\
-                                    <a href="javascript:;" data-gift-number="<%= batchPreset[i] %>" <%= i == 0 ? "class=cur":"" %>><%= batchPreset[i] %></a>\
-                                <% } %>\
-                                <a href="javascript:;" class="gift-info-panel-form-send" data-type="batch-send" data-propid="<%= prop.prop_id%>" data-index="<%= prop.index%>">赠送</a>\
+                            <div class="gift-info-panel-form" style="display: block;" data-gid="<%=giftid%>" data-type="gift-info-panel-form">\
                                 <a href="javascript:;" class="gift-info-panel-form-send all" style="margin-left: 4px;" data-type="batch-send" data-propid="<%= prop.prop_id%>" data-index="<%= prop.index%>">全部赠送</a>\
                                 <span class="justify-fix"></span>\
                             </div>\
