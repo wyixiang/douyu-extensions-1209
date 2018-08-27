@@ -1,7 +1,7 @@
 window.switchStates = defaultSwitchStates;
 window.config = defaultConfig;
 var elmPeck, elmPeckCdn;
-var _rules = [], regAt, nickname;
+var _rules = [];
 
 window.addEventListener("message", function(event) {
     if (event.source !== window || event.data['msgOrigin'] !== 'content')
@@ -123,7 +123,7 @@ function onSwitchChange(name, switched) {
             if (switched)
                 tryHookJsNickHandler();
             break;
-        case 'ChatAt':
+        /*case 'ChatAt':
             if (switched) {
                 tryHookACJ();
                 tryHookJsNickHandler();
@@ -133,7 +133,7 @@ function onSwitchChange(name, switched) {
                     regAt = new RegExp("@(全体|全体成员|所有人|" + nickname + ")(\\s|$)", 'gi');
                 }
             }
-            break;
+            break;*/
         case 'PreventLag':
             waitElm("body", function (elmBody) { elmBody.toggleClass(name, switched); });
             if (switched)
@@ -175,7 +175,7 @@ function tryHookJsNickHandler() {
 
 function handler_HOOK() {
     var ret = handler_ORIGIN.apply(this, arguments);
-    if (switchStates.ForceMute || switchStates.ChatAt) {
+    if (switchStates.ForceMute /*|| switchStates.ChatAt*/) {
         waitElm(".user-card-action-inr", 200, function (elmActions) {
             var tagA, name;
             if (switchStates.ForceMute) {
@@ -186,7 +186,7 @@ function handler_HOOK() {
                 });
                 elmActions.append(tagA);
             }
-            if (switchStates.ChatAt) {
+            /*if (switchStates.ChatAt) {
                 tagA = $('<a class="action-item" data-type="chatAt" href="javascript:;">At此人</a>');
                 name = $(".user-card-title h1").text();
                 tagA.on('click', function () {
@@ -195,7 +195,7 @@ function handler_HOOK() {
                     textArea.focus();
                 });
                 elmActions.append(tagA);
-            }
+            }*/
         });
     }
 
@@ -237,7 +237,7 @@ function _ACJ_HOOK(dataArr) {
                 if (day)
                     forceMute(chatInfo.user.name, window['$ROOM'].room_id, day);
             }
-            if (switchStates.ChatAt && regAt) {
+           /*if (switchStates.ChatAt && regAt) {
                 var isAdmin = (config.extAdmin ? config.extAdmin.indexOf(chatInfo.user.name) !== -1 : false) || chatInfo.user.role === 4 || chatInfo.user.role === 5;
                 if (chatInfo.user.name !== nickname && (!switchStates.OnlyAdminAt || isAdmin)) {
                     var matchRet = chatInfo.txt.match(regAt);
@@ -256,7 +256,7 @@ function _ACJ_HOOK(dataArr) {
                         }
                     }
                 }
-            }
+            }*/
         } /* else if (pack.type === PACK_TYPE.Rquiziln) {
             console.log(unserialize(pack.qril));
         } */

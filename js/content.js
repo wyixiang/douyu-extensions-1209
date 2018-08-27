@@ -8,7 +8,9 @@ LS.Load("switchStates", {}, function (val) {
             onSwitchChange(name, switchStates[name]);
     }
     if (switchStates.AutoGiveGift)
-	    flashReady();
+        autoGiveGift();
+    if (switchStates.RecordAssitant)
+        recordAssitant();
 });
 LS.Load("config", {}, function (val) {
     Object.assign(defaultConfig, val);
@@ -27,8 +29,11 @@ chrome.extension.onMessage.addListener(onBackOrPopupMsg);
 
 ImportScriptToPage("js/const.js");
 ImportScriptToPage("js/util.js");
+//ImportScriptToPage("js/record.js");
+
 ImportStyleToPage("css/page.css");
 ImportStyleToPage("css/gift.css");
+ImportStyleToPage("css/record.css");
 $(document).ready(ImportScriptToPage.bind(window, "js/page.js"));
 
 function onSwitchChange(name, switched) {

@@ -1,4 +1,4 @@
-function AutoGift() {
+function gift() {
 
 	var gift_panel = document.querySelector('#gift-content>.g-list>.gift-info-panel>.gift-info-panel-cont');
 	if(gift_panel){
@@ -124,11 +124,11 @@ function AutoGift() {
 	
 }
 
-function flashReady() {
+function autoGiveGift() {
 	if ($('#gift-content>.g-list .gift-item').length>0) {            
-		setTimeout(AutoGift, 100);
+		setTimeout(gift, 100);
 	} else {            
-		setTimeout(flashReady, 100);
+		setTimeout(autoGiveGift, 100);
 	}
 }
 

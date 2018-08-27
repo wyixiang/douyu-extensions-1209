@@ -20,14 +20,15 @@ var Switch = {
     LiveTip: { CN: "开播提醒 - 点击设置", index: 3, tip: "开启后, 在列表内的主播开播时将会提醒\n点击开播提示可直接进入直播间\n(无需打开页面, 后台监听是否开播)", config: true },
     AutoGetGift: { CN: "自动领取礼物箱子", index: 4, tip: "开启后, 在箱子可领取时, 将会自动点击\n(如果弹出验证码, 需用户手动验证)" },
     RemoveBoxDelay: { CN: "移除箱子延迟", index: 5, tip: "斗鱼的箱子会随机附加加载延迟\n开启后, 该延迟将被强制设置为0" },
-    AutoGiveGift: { CN: "允许批量赠送礼物", index: 6, tip: "开启后, 礼物界面增加自定义数量赠送窗口\n每次更改刷新网页后启用"},
-    ChatController: { CN: "启用聊天室控制台", index: 7, tip: "开启后, 直播间聊天室将新增一个图标\n鼠标移致该图标上方将可展开一些聊天室的扩展功能\n不启用控制台会使控制台相关的功能都自动禁用" },
-    GetBoxHelp: { CN: "开宝箱辅助", index: 8, tip: "开启后, 将出现当日的宝箱计数，斗鱼每日领取上限为100个\n有新的箱子需要验证, 发出提示音, 并且该页面标题将提示", config: true },
+    AutoGiveGift: { CN: "批量赠送礼物辅助", index: 6, tip: "开启后, 礼物界面增加自定义数量赠送窗口\n每次更改刷新网页后启用"},
+    RecordAssitant: { CN: "弹幕&礼物记录助手", index: 7, tip: "开启后, 直播界面左侧增加隐藏式记录助手\n每次更改刷新网页后启用"},
+    ChatController: { CN: "启用弹幕控制台", index: 8, tip: "开启后, 直播间弹幕区将新增一个图标\n鼠标移致该图标上方将可展开一些弹幕的扩展功能\n不启用控制台会使控制台相关的功能都自动禁用" },
+    GetBoxHelp: { CN: "开宝箱辅助", index: 9, tip: "开启后, 将出现当日的宝箱计数，斗鱼每日领取上限为100个\n有新的箱子需要验证, 发出提示音, 并且该页面标题将提示", config: true },
 
-    ChatAt: { CN: "开启AT功能", index: 100, type: 'chat', tip: "开启后任意人都可以AT你 (你在聊天室才可收到), @Name即可AT别人(插件使用者)\n同时用户信息面板将增加一个按钮'@此人', 点击后会在聊天框自动输入" },
-    OnlyAdminAt: { CN: "仅允许管理员AT我", index: 101, type: 'chat', tip: "管理员指主播/房管/超管" },
+    //ChatAt: { CN: "开启AT功能", index: 100, type: 'chat', tip: "开启后任意人都可以AT你 (你在聊天室才可收到), @Name即可AT别人(插件使用者)\n同时用户信息面板将增加一个按钮'@此人', 点击后会在聊天框自动输入" },
+    //OnlyAdminAt: { CN: "仅允许管理员AT我", index: 101, type: 'chat', tip: "管理员指主播/房管/超管" },
     ForceMute: { CN: "强制禁言", index: 102, type: 'chat', tip: "用户信息面板增加一个强制禁言的按钮, 该选项可以封禁广告\n实现方式为调用后台的禁言接口\n该功能的禁言成功提示其他用户不可见" },
-    AutoMute: { CN: "自动强制禁言", index: 103, type: 'chat', tip: "自动对符合禁言规则的用户进行封禁" },
+    AutoMute: { CN: "自动禁言", index: 103, type: 'chat', tip: "自动对符合禁言规则的用户进行封禁" },
     PreventWrong: { CN: "防误封", index: 104, type: 'chat', tip: "开启后, 自动禁言在以下条件符合时将跳过封禁检查\n1.发言内容长度 ≤ 8\n2.佩戴本直播间粉丝牌且粉丝牌等级 ≥ 2" },
     // 不自动清屏
     ChatMode: { CN: "完全聊天模式", index: 106, type: 'chat', tip: "聊天室中聊天之外的内容将被隐藏\n如用户前缀(用户角色标记除外, 如主播), 进房信息等" },
@@ -43,6 +44,7 @@ var defaultSwitchStates = {
     AutoGetGift: true,
     RemoveBoxDelay: true,
     AutoGiveGift: true,
+    RecordAssitant: true,
     ChatController: true,
     GetBoxHelp: true
 };
