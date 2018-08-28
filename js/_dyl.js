@@ -227,8 +227,7 @@ function define_HOOK() {
                             }\
                         }\
                     }\
-                }\
-                var '
+                    var '
             );
             arguments[Array.from(arguments).indexOf(moduleFun)] = parseFun(struct);
         } else if (moduleName === "douyu/page/room/normal/mod/gift/model/treasure" || moduleName === "douyu/page/room/webm/mod/gift/model/treasure") {
@@ -245,21 +244,7 @@ function define_HOOK() {
                 'startListening:function(){if (switchStates.ForbidTipCP) return;'
             );
             arguments[Array.from(arguments).indexOf(moduleFun)] = parseFun(struct);
-        } /* else if (moduleName === "douyu-activity/douyu-pc/utils/widget/vote") {
-            struct = resolveFun(moduleFun);
-            struct.codes = struct.codes.replace(
-                /\.addVoteCount=function\(.\){/,
-                function (matched) {
-                return matched + '\
-                            var opts = arguments[0];\
-                            opts.count = prompt("请输入投票数量 (该功能来源于斗鱼助手插件, 如不需要请关闭插件)", opts.count || 1);\
-                            if (isNaN(opts.count)) opts.count = 1;\
-                            opts.count = Math.ceil(opts.count);\
-                        ';
-                }
-            );
-            arguments[Array.from(arguments).indexOf(moduleFun)] = parseFun(struct);
-            } */
+        }
     } catch (err) {
         console.error('Hook failed', err);
     }
