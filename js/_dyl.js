@@ -3,6 +3,17 @@
 // init temp
 window.switchStates = {};
 
+// helper
+window.extHelper = {
+  numShortStr: function(e) {
+    var t = e || 0
+      , a = 1e4
+      , i = 1e8
+      , s = Math.pow(10, 2);
+    return t >= i ? Math.floor(t / i * s) / s + "亿" : t >= a ? Math.floor(t / a * s) / s + "万" : t > 0 ? Math.floor(t * s) / s : t
+  }
+};
+
 // hook define
 var define_ORIGIN;
 Object.defineProperty(window, "define", {
@@ -23,7 +34,82 @@ function define_HOOK() {
         }
 
         var struct, dataPropName;
-        if (moduleName === "douyu/page/room/normal/mod/backpack" || moduleName === "douyu/page/room/webm/mod/backpack") {
+        if (moduleName === "douyu/page/room/normal/mod/gift" || moduleName === "douyu/page/room/webm/mod/gift") {
+            struct = resolveFun(moduleFun);
+            dataPropName = struct.codes.match(/\.find\('\[data-type="gift-info-panel"]'\);(.)\.panelWidth/)[1];
+
+            struct.codes = struct.codes.replace(
+                /(.)\.giftSend\(({target:.,number:.\.currentNumber\|\|0,batch:1})\)/,
+                function (matched, self, opt) {
+                return '(function(opt){\
+                                var self = ' + self + ';\
+                                var obs = ' + struct.args.split(',')[2] + ';\
+                                if (window.config && window.config["QuickGift"]) {\
+                                    var target = window.$(opt.target);\
+                                    var data = {\
+                                        gid: target.data("giftid"),\
+                                        send: target.data("send"),\
+                                        exp: target.data("exp"),\
+                                        count: opt.number,\
+                                        sid: window.$SYS.uid,\
+                                        did: window.$ROOM.owner_uid,\
+                                        rid: window.$ROOM.room_id,\
+                                        batch: opt.batch,\
+                                        num: 1\
+                                    };\
+                                    var sendFun = self[data.send == 1 ? "sendYW" : "sendYC"].bind(self, data);\
+                                    function batchSend(num) {\
+                                        if (num <= 0) return;\
+                                        sendFun();\
+                                        setTimeout(batchSend.bind(this, num - 1), 100);\
+                                    }\
+                                    batchSend(data.count);\
+                                    self.doms.giftInfoPanel.stop(!0, !0).hide().addClass("out");\
+                                    setTimeout(function(){ obs.trigger("mod.gift.batch.switch.open") }, 500);\
+                                } else {\
+                                    self.giftSend(opt);\
+                                }\
+                            })(' + opt + ')';
+                }
+            );
+            struct.codes = struct.codes.replace(
+                "<% if (!isBatchGift){%>",
+                "<% if (!isBatchGift || culture_content == 'faker data'){%>"
+            );
+            struct.codes = struct.codes.replace(
+                /(.)\?\(.=.\.batchNum\|\|\[],.=.\.hit\|\|\[],.=.\.culture_content,.=.\.desc_content_1,.=.\.desc_content_2,.=.\.isBatchGift,.=.\.batchTemp\|\|{}\):\(.=""\.split\(","\),.=\[]\);/,
+                function (matched, var1) {
+                matched = matched.replace('isBatchGift', 'isBatchGift && (var1.culture_content != "faker data" || switchStates.AutoGiveGift)');
+                matched = matched.replace(
+                    /(.)=.\.batchNum\|\|\[]/,
+                    function (matched, var2) {
+                    return var2 + ' = (switchStates.AutoGiveGift && ' + var1 + '.batchNum) || []'
+                    }
+                );
+                return 'var var1 = ' + var1 + ';'
+                    + matched;
+                }
+            );
+            arguments[Array.from(arguments).indexOf(moduleFun)] = parseFun(struct);
+        } else if (moduleName === "douyu/com/room-gift-tmp"){
+            struct = resolveFun(moduleFun);
+            struct.codes = struct.codes.replace(
+                /(var (.)=.\[.],(.)=.\[.];)(if\(!.\.isEmptyObject\(.\)\){.*?}\)})/,
+                function (matched, code1, var1, var2, code2) {
+                return code1 +
+                    'var var1 = ' + var1 + ',\
+                        var2 = ' + var2 + ';\
+                    if (!var1) {\
+                    ' + var1 + ' = {\
+                        culture_content: "faker data",\
+                        list: [{"num":10,"desc":"十全十美","bimg_effect":"","barrage_effect":"","bc_effect":[],"pc":1000,"bimg_lv":0},{"num":166,"desc":"六六大顺","bimg_effect":"","barrage_effect":"","bc_effect":[],"pc":16600,"bimg_lv":0},{"num":520,"desc":"我爱你","bimg_effect":"","barrage_effect":"https://cs-op.douyucdn.cn/dygev/2018/08/14/d3ea08f12f32e1f19ae48c6680e7840f.svga","bc_effect":[],"pc":52000,"bimg_lv":0},{"num":1314,"desc":"一生一世","bimg_effect":"","barrage_effect":"https://cs-op.douyucdn.cn/dygev/2018/08/14/c4ccf151e352386f60d513e6f6a6bbde.svga","bc_effect":{"flash":"https://cs-op.douyucdn.cn/dygev/2018/08/20/80155fc8a624ca59e4074678be7fc5cf.swf","h5_header":"https://cs-op.douyucdn.cn/dygev/2018/08/20/a6ea11514b2be04d33b9329fa9d477d3.png","h5_middle":"https://cs-op.douyucdn.cn/dygev/2018/08/20/804b356b65d2bd6b5d1c5239960504dc.png","h5_tail":"https://cs-op.douyucdn.cn/dygev/2018/08/20/03ab36b7ac04736aacdad3d5116783b5.png","h5_my":21,"h5_ty":21,"nc_web":"FFFF99","cc_web":"0D0D0D","flash_cn":"batch_gift_1859_1314"},"pc":131400,"bimg_lv":0},{"num":9999,"desc":"长长久久","bimg_effect":"","barrage_effect":"https://cs-op.douyucdn.cn/dygev/2018/08/14/6693398365191a07a76e7d3805240d55.svga","bc_effect":{"flash":"https://cs-op.douyucdn.cn/dygev/2018/08/20/edd52506d37d177f9d446cb8afcfdcc9.swf","h5_header":"https://cs-op.douyucdn.cn/dygev/2018/08/20/cd12a68adf7a94dc7496c8704ed0c8b5.png","h5_middle":"https://cs-op.douyucdn.cn/dygev/2018/08/20/eb3c0d9b23e22a42cdb61b1fc6cb0031.png","h5_tail":"https://cs-op.douyucdn.cn/dygev/2018/08/20/94d488111f2b33b4391ff5b694b74f3a.png","h5_my":21,"h5_ty":21,"nc_web":"FFFF99","cc_web":"0D0D0D","flash_cn":"batch_gift_1859_9999"},"pc":999900,"bimg_lv":0}]\
+                    };\
+                    }'
+                    + code2;
+                }
+            );
+            arguments[Array.from(arguments).indexOf(moduleFun)] = parseFun(struct);
+        } else if (moduleName === "douyu/page/room/normal/mod/backpack" || moduleName === "douyu/page/room/webm/mod/backpack") {
             struct = resolveFun(moduleFun);
             dataPropName = struct.codes.match(/useProp:function\(.\){if\(!(.)\.sending\)/)[1];
             var observerPropName = struct.args.split(",")[1];
@@ -31,11 +117,15 @@ function define_HOOK() {
             struct.codes = struct.codes.replace(
                 '内可连击</span>\',"    </div>",',
                 '内可连击</span>\',"    </div>",\'\
-                    <% batchPreset = [10,66,520]; %>\
-                    <% if ( AutoGiveGift && prop.count>9 ) { %>\
+                    <% batchPreset = [10,100,166,520,1314]; %>\
+                    <% if ( AutoGiveGift && prop.count>9  ) { %>\
                         <div class="gift-info-panel-give gift-info-panel-give-not-explain" data-type="gift-info-give">\
-                            <div class="gift-info-panel-form" style="display: block;" data-gid="<%=giftid%>" data-type="gift-info-panel-form">\
-                                <a href="javascript:;" class="gift-info-panel-form-send all" style="margin-left: 4px;" data-type="batch-send" data-propid="<%= prop.prop_id%>" data-index="<%= prop.index%>">全部赠送</a>\
+                            <div class="gift-info-panel-form" style="display: block" data-gid="<%=giftid%>" data-type="gift-info-panel-form">\
+                                <% for (var i = 0, length = batchPreset.length; i < length; i++) { %>\
+                                    <a href="javascript:;" data-gift-number="<%= batchPreset[i] %>" <%= i == 0 ? "class=cur":"" %>><%= batchPreset[i] %></a>\
+                                <% } %>\
+                                <a href="javascript:;" class="gift-info-panel-form-send" style="right: 64px;" data-type="batch-send" data-propid="<%= prop.prop_id%>" data-index="<%= prop.index%>">赠送</a>\
+                                <a href="javascript:;" class="gift-info-panel-form-send all" data-type="batch-send" data-propid="<%= prop.prop_id%>" data-index="<%= prop.index%>">全部赠送</a>\
                                 <span class="justify-fix"></span>\
                             </div>\
                         </div>\
@@ -56,97 +146,98 @@ function define_HOOK() {
                     var prop_id = window.$(this).data("propid");\
                     var index = window.$(this).data("index");\
                     var data = ' + dataPropName + ';\
-                    var observer = ' + observerPropName + ';\
-                    var prop = data.props[index];\
-                    if (window.$(this).hasClass("all")) \
-                        num = prop.count;\
-                    if (window.config && window.config["QuickGift"]) {\
-                        var maxTd = 10;\
-                        var singleTdMax = Math.ceil(num / maxTd);\
-                        var tdNum = Math.ceil(num / singleTdMax);\
-                        var endReduce = tdNum * singleTdMax - num;\
-                        for (var i = 0; i < tdNum; i++) {\
-                            batchSend(singleTdMax - (i === tdNum - 1 ? endReduce : 0));\
-                        }\
-                    } else {\
-                        batchSend(num);\
-                    }\
-                    function batchSend(num) {\
-                        if (num <= 0) return;\
-                        window.$.ajax({\
-                            type: "post",\
-                            url: "/member/prop/send",\
-                            dataType: "json",\
-                            data: {\
-                                dy: window.$ROOM.device_id,\
-                                prop_id: prop_id,\
-                                num: 1,\
-                                sid: window.$SYS.uid,\
-                                did: window.$ROOM.owner_uid,\
-                                rid: window.$ROOM.room_id,\
-                                is_jz: 0\
-                            },\
-                            success: function(a) {\
-                                if (0 === a.result) {\
-                                    if (5 === prop.prop_type)\
-                                        return data.reload(a.data), void data.rendertip(a);\
-                                    prop.count -= 1;\
-                                    data.fxPopExp(prop, a);\
-                                    0 === prop.count ? data.reload(a.data) : (data.updatePanel(prop), data.updateProp(prop));\
-                                    observer.trigger("room.giftprop.send.success.backland", prop.rel_id);\
-                                    observer.trigger("mod.prop.hover.batter.search", prop.rel_id, index);\
-                                    observer.trigger("room.gift.send.success.yearfestival", {\
-                                        val: prop.intimate,\
-                                        isProp: !0\
-                                    });\
-                                    batchSend(num - 1);\
-                                } else {\
-                                    window.$.dialog.tips_black(a.msg)\
+                            var observer = ' + observerPropName + ';\
+                            var prop = data.props[index];\
+                            if (window.$(this).hasClass("all")) \
+                                num = prop.count;\
+                            if (window.config && window.config["QuickGift"]) {\
+                                var maxTd = 10;\
+                                var singleTdMax = Math.ceil(num / maxTd);\
+                                var tdNum = Math.ceil(num / singleTdMax);\
+                                var endReduce = tdNum * singleTdMax - num;\
+                                for (var i = 0; i < tdNum; i++) {\
+                                    batchSend(singleTdMax - (i === tdNum - 1 ? endReduce : 0));\
                                 }\
-                            },\
-                            error: function() {\
-                                window.$.dialog.tips_black("网络错误！")\
-                            }\
-                        })\
-                    }\
-                }).on("mouseenter"'
-            );
-            arguments[Array.from(arguments).indexOf(moduleFun)] = parseFun(struct);
-        } else if (moduleName === "douyu/page/room/normal/mod/gift/controller/treasure" || moduleName === "douyu/page/room/webm/mod/gift/controller/treasure") {
-          struct = resolveFun(moduleFun);
-          struct.codes = struct.codes.replace(
-            '.geetest||{},',
-            '.geetest||{};console.log("== geetest ==");\
-            var json = arguments[0];\
-            var geeTest = json.geetest || {};\
-            if ((1 === json.validate || -2 === parseInt(json.code, 10)) && 0 === parseInt(geeTest.code, 10)) {\
-                sendMsgToBack(MSG_TYPE.GotBox);\
-                if (switchStates.GetBoxHelp && window.constInitialized && config.boxLog.count < 99) {\
-                    sendMsgToBack(MSG_TYPE.AudioTip);\
-                    if (!document.title_src) {\
-                        document.title_src = document.title;\
-                        document.title = "[新箱子验证] " + document.title;\
-                        setTimeout(function () {\
-                            if (document.hidden) {\
-                                setTimeout(arguments.callee, 1000);\
                             } else {\
-                                document.title = document.title_src;\
-                                delete document.title_src;\
+                                batchSend(num);\
                             }\
-                        }, 100);\
+                            function batchSend(num) {\
+                                if (num <= 0) return;\
+                                window.$.ajax({\
+                                    type: "post",\
+                                    url: "/member/prop/send",\
+                                    dataType: "json",\
+                                    data: {\
+                                        dy: window.$ROOM.device_id,\
+                                        prop_id: prop_id,\
+                                        num: 1,\
+                                        sid: window.$SYS.uid,\
+                                        did: window.$ROOM.owner_uid,\
+                                        rid: window.$ROOM.room_id,\
+                                        is_jz: 0\
+                                    },\
+                                    success: function(a) {\
+                                        if (0 === a.result) {\
+                                            if (5 === prop.prop_type)\
+                                                return data.reload(a.data), void data.rendertip(a);\
+                                            prop.count -= 1;\
+                                            data.fxPopExp(prop, a);\
+                                            0 === prop.count ? data.reload(a.data) : (data.updatePanel(prop), data.updateProp(prop));\
+                                            observer.trigger("room.giftprop.send.success.backland", prop.rel_id);\
+                                            observer.trigger("mod.prop.hover.batter.search", prop.rel_id, index);\
+                                            observer.trigger("room.gift.send.success.yearfestival", {\
+                                                val: prop.intimate,\
+                                                isProp: !0\
+                                            });\
+                                            batchSend(num - 1);\
+                                        } else {\
+                                            window.$.dialog.tips_black(a.msg)\
+                                        }\
+                                    },\
+                                    error: function() {\
+                                        window.$.dialog.tips_black("网络错误！")\
+                                    }\
+                                })\
+                            }\
+                        }).on("mouseenter"'
+                    );
+                    arguments[Array.from(arguments).indexOf(moduleFun)] = parseFun(struct);
+            } else if (moduleName === "douyu/page/room/normal/mod/gift/controller/treasure" || moduleName === "douyu/page/room/webm/mod/gift/controller/treasure") {
+                struct = resolveFun(moduleFun);
+                struct.codes = struct.codes.replace(
+                    '.geetest||{},',
+                    '.geetest||{};\
+                    var json = arguments[0];\
+                    var geeTest = json.geetest || {};\
+                    if ((1 === json.validate || -2 === parseInt(json.code, 10)) && 0 === parseInt(geeTest.code, 10)) {\
+                        sendMsgToBack(MSG_TYPE.GotBox);\
+                        if (switchStates.GetBoxHelp && window.constInitialized && config.boxLog.count < 99) {\
+                            sendMsgToBack(MSG_TYPE.AudioTip);\
+                            if (!document.title_src) {\
+                                document.title_src = document.title;\
+                                document.title = "[新箱子验证] " + document.title;\
+                                setTimeout(function () {\
+                                    if (document.hidden) {\
+                                        setTimeout(arguments.callee, 1000);\
+                                    } else {\
+                                        document.title = document.title_src;\
+                                        delete document.title_src;\
+                                    }\
+                                }, 100);\
+                            }\
+                        }\
                     }\
                 }\
-            }\
-            var '
-          );
-          arguments[Array.from(arguments).indexOf(moduleFun)] = parseFun(struct);
+                var '
+            );
+            arguments[Array.from(arguments).indexOf(moduleFun)] = parseFun(struct);
         } else if (moduleName === "douyu/page/room/normal/mod/gift/model/treasure" || moduleName === "douyu/page/room/webm/mod/gift/model/treasure") {
-          struct = resolveFun(moduleFun);
-          struct.codes = struct.codes.replace(
-            /=1e3\*\(Math\.floor\(5\*Math\.random\(\)\)\+1\)/g,
-            '= switchStates.RemoveBoxDelay ? 1e3 : 1e3*(Math.floor(5*Math.random())+1)'
-          );
-          arguments[Array.from(arguments).indexOf(moduleFun)] = parseFun(struct);
+            struct = resolveFun(moduleFun);
+            struct.codes = struct.codes.replace(
+                /=1e3\*\(Math\.floor\(5\*Math\.random\(\)\)\+1\)/g,
+                '= switchStates.RemoveBoxDelay ? 1e3 : 1e3*(Math.floor(5*Math.random())+1)'
+            );
+            arguments[Array.from(arguments).indexOf(moduleFun)] = parseFun(struct);
         } else if (moduleName === "douyu/page/room/normal/mod/freetime" || moduleName === "douyu/page/room/webm/mod/freetime") {
             struct = resolveFun(moduleFun);
             struct.codes = struct.codes.replace(
@@ -154,16 +245,21 @@ function define_HOOK() {
                 'startListening:function(){if (switchStates.ForbidTipCP) return;'
             );
             arguments[Array.from(arguments).indexOf(moduleFun)] = parseFun(struct);
-        }
-        /* else if (moduleName === "douyu/page/room/normal/mod/guess-game") {
+        } /* else if (moduleName === "douyu-activity/douyu-pc/utils/widget/vote") {
             struct = resolveFun(moduleFun);
             struct.codes = struct.codes.replace(
-                'case"rquizisn":',
-                'case"rquizisn":console.log(t, i, i.isArray(s)?i.decode(s):[{value:s}]);'
+                /\.addVoteCount=function\(.\){/,
+                function (matched) {
+                return matched + '\
+                            var opts = arguments[0];\
+                            opts.count = prompt("请输入投票数量 (该功能来源于斗鱼助手插件, 如不需要请关闭插件)", opts.count || 1);\
+                            if (isNaN(opts.count)) opts.count = 1;\
+                            opts.count = Math.ceil(opts.count);\
+                        ';
+                }
             );
             arguments[Array.from(arguments).indexOf(moduleFun)] = parseFun(struct);
-            console.log('hooked ============');
-        } */
+            } */
     } catch (err) {
         console.error('Hook failed', err);
     }

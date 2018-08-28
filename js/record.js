@@ -40,7 +40,7 @@ function recordAssitant() {
 		
 		var $recordBox = $('<div id="gift_record" class="record_box"></div>')
 						.appendTo('#js-room-video');
-		$('<div class="record_div"><ul class="nav nav-tabs"><li role="presentation" class="active"><a href="#gift_tab" aria-controls="gift_tab" role="tab" data-toggle="tab">礼物</a></li><li role="presentation"><a href="#danmu_tab" aria-controls="danmu_tab" role="tab" data-toggle="tab">弹幕</a></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane active" id="gift_tab"></div><div role="tabpanel" class="tab-pane" id="danmu_tab"></div></div></div>').appendTo($recordBox);
+		$('<div class="record_div"><ul class="nav nav-tabs"><li role="presentation" class="active"><a href="#danmu_tab" aria-controls="danmu_tab" role="tab" data-toggle="tab">弹幕</a></li><li role="presentation"><a href="#gift_tab" aria-controls="gift_tab" role="tab" data-toggle="tab">礼物</a></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane active" id="gift_tab"></div><div role="tabpanel" class="tab-pane" id="danmu_tab"></div></div></div>').appendTo($recordBox);
 		$('<a href="javascript:;"></a>')
 		.addClass('record_btn')
 		.css('background-image','url('+ chrome.extension.getURL("../res/btn.png") +')')
@@ -371,10 +371,6 @@ function recordAssitant() {
 		}
 	}
     
-	if (document.getElementById('js-chat-cont')) {
-        chrome.runtime.sendMessage({reg: "reg"}, function(response) {
-            console.log(response.reg);
-        });
-		flashReady();
-	}
+	flashReady();
+	
 }

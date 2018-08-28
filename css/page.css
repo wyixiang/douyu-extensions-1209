@@ -120,4 +120,10 @@
   .fans-barrage-box.configAutoMuteDiv .fans-barrage-right {
     cursor: pointer; }
 
+.prop-info-panel {
+  max-width: 400px; }
+
+.gift-info-panel-form {
+  padding-right: 130px; }
+
 /*# sourceMappingURL=page.css.map */

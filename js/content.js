@@ -7,8 +7,6 @@ LS.Load("switchStates", {}, function (val) {
         if (Switch.hasOwnProperty(name))
             onSwitchChange(name, switchStates[name]);
     }
-    if (switchStates.AutoGiveGift)
-        autoGiveGift();
     if (switchStates.RecordAssitant)
         recordAssitant();
 });
@@ -32,7 +30,6 @@ ImportScriptToPage("js/util.js");
 //ImportScriptToPage("js/record.js");
 
 ImportStyleToPage("css/page.css");
-ImportStyleToPage("css/gift.css");
 ImportStyleToPage("css/record.css");
 $(document).ready(ImportScriptToPage.bind(window, "js/page.js"));
 

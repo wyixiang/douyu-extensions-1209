@@ -86,8 +86,8 @@ var PACK_TYPE = {
     SharkRoom2: "sssrres", // 分享直播间
     RoomState: "rss", // 直播间状态更新
     Rquiziln: "rquiziln", // 竞猜
-    Rquizisn: "Rquizisn" // 竞猜2
-    // cthn, anbc
+    Rquizisn: "rquizisn" // 竞猜2
+    // cthn, anbc(贵族相关)
 };
 
 window.constInitialized = true;
