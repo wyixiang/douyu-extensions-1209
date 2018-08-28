@@ -1,7 +1,7 @@
 {  
   "name": "斗鱼助手",
   "description": "对斗鱼的功能进行一些扩展/修改, 更好的斗鱼用户体验",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "manifest_version": 2,
   "background": {
     "_page": "background.html",

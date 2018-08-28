@@ -32,9 +32,11 @@ function recordAssitant() {
         '110': 'rgb(255,114,0)',
         '120': 'rgb(255,204,2)'
     }
-	var recordLevel = '40';
+	var recordLevel = '45';
 	
 	var specialID = [];
+
+	var roomid = $("link[rel=canonical]").attr("href").split('/')[3];
 	
 	function domInit() {
 		
@@ -286,6 +288,8 @@ function recordAssitant() {
 							var female = $li.hasClass('girl-chart');//小姐姐
 							var chartli = $li.hasClass('chartli');	//记录了半天，全是false，不知道是啥							
 							var level = $li.data('level');
+							var fans = $li.find('.chat-icon-pad').data('fans');
+							var fanslevel = $li.find('.fans-badge-icon').data('uiLevel');
 							var position = noble ? 2 : 0;
 							var textHtml = $danmuText.html();
 							var chatid = $danmuText.attr('chatid');//看起来是弹幕的唯一识别号
@@ -326,7 +330,7 @@ function recordAssitant() {
 							$name = $li.find('.name');
 							var nameStr = $name.text();
 							var isSpecial = specialID.indexOf(nameStr.slice(0,-1))>=0 ? true : false;                                    
-							if(isSpecial || superAdmin || level>=parseInt(recordLevel) || noble || role.length){
+							if(isSpecial || superAdmin || level>=parseInt(recordLevel) || noble || role.length || (fans===roomid&&fanslevel>=23)){
 								var now = new Date();
 								var nobleTitle = $li.find('.user-noble>img').attr('title');
 								var nobleBg = nobleTitle && nobleColor[nobleTitle.slice(0,2)];

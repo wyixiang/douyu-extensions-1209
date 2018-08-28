@@ -26,7 +26,7 @@
 .HideChat:not(.PreventLag) #ShowChatTip2 {
   display: none; }
 
-.ChatMode .chat-icon-pad.user-level, .ChatMode .chat-icon-pad.user-noble, .ChatMode .chat-icon-pad[data-msg=fans] {
+.ChatMode .chat-icon-pad.user-level, .ChatMode .chat-icon-pad.anchor-level-icon, .ChatMode .chat-icon-pad.user-noble, .ChatMode .chat-icon-pad[data-msg=fans] {
   display: none !important; }
 .ChatMode .jschartli.sys-msg {
   display: none !important; }
@@ -45,6 +45,8 @@
 .ChatMode .jschartli:not(.hy-chat):not(.sys-msg), .ChatMode2 .jschartli:not(.hy-chat):not(.sys-msg) {
   display: none !important; }
 .ChatMode .chat-icon-pad.cq-level, .ChatMode .chat-icon-pad.madel-list, .ChatMode .chat-icon-pad.cq-other, .ChatMode2 .chat-icon-pad.cq-level, .ChatMode2 .chat-icon-pad.madel-list, .ChatMode2 .chat-icon-pad.cq-other {
+  display: none !important; }
+.ChatMode2 .chat-icon-pad.anchor-level-icon {
   display: none !important; }
 
 .body-flash-fullpage .filter-keywords-btn {
