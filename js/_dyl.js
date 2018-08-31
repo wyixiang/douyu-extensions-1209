@@ -117,7 +117,7 @@ function define_HOOK() {
             struct.codes = struct.codes.replace(
                 '内可连击</span>\',"    </div>",',
                 '内可连击</span>\',"    </div>",\'\
-                    <% batchPreset = [10,100,166,520,1314]; %>\
+                    <% batchPreset = [10,20,50,100,1209]; %>\
                     <% if ( AutoGiveGift && prop.count>9  ) { %>\
                         <div class="gift-info-panel-give gift-info-panel-give-not-explain" data-type="gift-info-give">\
                             <div class="gift-info-panel-form" style="display: block" data-gid="<%=giftid%>" data-type="gift-info-panel-form">\

@@ -9,6 +9,7 @@ LS.Load("switchStates", {}, function (val) {
     }
     if (switchStates.RecordAssitant)
         recordAssitant();
+    //setTimeout(refreshTitle, 1000);
 });
 LS.Load("config", {}, function (val) {
     Object.assign(defaultConfig, val);
@@ -132,4 +133,19 @@ function ImportStyleToPage(src) {
     newElement.setAttribute("type","text/css");
     newElement.setAttribute("href", chrome.extension.getURL(src));
     document.head.appendChild(newElement);
+}
+
+function refreshTitle(){            
+    chrome.runtime.sendMessage({                
+        rid: $("link[rel=canonical]").attr("href").split('/')[3]
+    }, function(response) {
+        if(response){
+            console.log('11111');
+            if(response.title && switchStates.TitleRefresh)
+                $('#anchor-info .headline>h2').text(response.title);
+            else if(response.error)
+                console.log('refreshTitle error: '+response.error);
+        }                
+        setTimeout(refreshTitle, 5000);
+    });
 }

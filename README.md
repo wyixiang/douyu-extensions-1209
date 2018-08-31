@@ -1,9 +1,12 @@
 # douyu-extensions-1209
 
 该版本基于196斗鱼插件2.1.1版本(作者whitemind@qq.com)，为了方便使用进行了一些定制，扁平化设计，并把颜色调的素雅了一些，同时取消开宝箱辅助的99上限。  
-![image](https://github.com/wyixiang/douyu-extensions-1209/blob/master/pic/UI.png)
 
 ## 版本日志
+
+### 0.3.4
+1.紧急修复粉丝牌识别bug。  
+2.修复滚动条bug。
 
 ### 0.3.3
 1.紧急修复196版（2.1.2）捡垃圾计数bug。  

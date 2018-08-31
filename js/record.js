@@ -288,7 +288,7 @@ function recordAssitant() {
 							var female = $li.hasClass('girl-chart');//小姐姐
 							var chartli = $li.hasClass('chartli');	//记录了半天，全是false，不知道是啥							
 							var level = $li.data('level');
-							var fans = $li.find('.chat-icon-pad').data('fans');
+							var fans = $li.find('.chat-icon-pad').eq(-2).data('fans');//粉丝牌
 							var fanslevel = $li.find('.fans-badge-icon').data('uiLevel');
 							var position = noble ? 2 : 0;
 							var textHtml = $danmuText.html();
@@ -296,6 +296,11 @@ function recordAssitant() {
 							var danmuColor = $danmuText.attr('style') ? 'rgba(' + $danmuText.css('color').split('(')[1].split(')')[0] + ',.6)' : false;
 							var danmuBlock = false;
 							//console.log('role='+role.length+role);
+							//console.log(' roomid='+roomid+' fans='+fans+' fanslevel='+fanslevel);
+							//console.log('(fans==roomid&&fanslevel>=6)  '+(fans==roomid&&fanslevel>=6));
+							//console.dir(fans);
+							//console.dir($li.find('.chat-icon-pad').eq(-2));
+							//console.log(' fans='+fans);
 							if(danmuColor)
 								position = 1;								
 

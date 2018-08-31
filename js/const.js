@@ -22,6 +22,7 @@ var Switch = {
     RemoveBoxDelay: { CN: "移除箱子延迟", index: 5, tip: "斗鱼的箱子会随机附加加载延迟\n开启后, 该延迟将被强制设置为0" },
     AutoGiveGift: { CN: "批量赠送礼物辅助", index: 6, tip: "开启后, 礼物界面增加自定义数量赠送窗口\n每次更改刷新网页后启用"},
     RecordAssitant: { CN: "弹幕&礼物记录助手", index: 7, tip: "开启后, 直播界面左侧增加隐藏式记录助手\n每次更改刷新网页后启用"},
+    //TitleRefresh: { CN: "标题刷新", index: 10, tip: "自动刷新房间标题（20秒一次）"},
     ChatController: { CN: "启用弹幕控制台", index: 8, tip: "开启后, 直播间弹幕区将新增一个图标\n鼠标移致该图标上方将可展开一些弹幕的扩展功能\n不启用控制台会使控制台相关的功能都自动禁用" },
     GetBoxHelp: { CN: "开宝箱辅助", index: 9, tip: "开启后, 将出现当日的宝箱计数，斗鱼每日领取上限为100个\n有新的箱子需要验证, 发出提示音, 并且该页面标题将提示", config: true },
 
